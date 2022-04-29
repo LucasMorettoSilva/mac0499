@@ -1,0 +1,121 @@
+body {
+    font-family: Helvetica, Verdana, sans-serif;
+    margin: 0;
+}
+
+nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4a7e5d;
+    border-bottom: solid #2a5e3d 2px;
+}
+
+nav h2 {
+    margin-left: 2%;
+    color: #ffffff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4a7e5d;
+    border-bottom: solid #2a5e3d 1px;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    font-weight: bold;
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #efefef;
+    background-color: #3a6e4d;
+}
+
+main {
+    width: 95%;
+    float: right;
+}
+
+
+section.resumo h1 {
+    font-size: 24px;
+}
+
+section.resumo h2 {
+    font-size: 18px;
+}
+
+section.resumo h3 {
+    font-size: 16px;
+}
+
+section.resumo {
+    width: 60%;
+    float: left;
+    margin-bottom: 60px;
+}
+
+section.resumo div, section.desenhos div {
+    width: 90%;
+    margin: auto;
+}
+
+section.desenhos {
+    width: 40%;
+    float: left;
+}
+
+section.desenhos div {
+    width: 50%;
+    padding-top: 50%;
+    margin: 30px auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+section.desenhos #retangular {
+    background-image: url('retangular.gif');
+}
+
+section.desenhos #grade {
+    background-image: url('grade-y.gif');
+}
+
+
+@media screen and (max-width: 800px) {
+    main {
+        float: none;
+        width: 100%;
+    }
+
+    section.resumo, section.desenhos {
+        float: none;
+        width: 100%;
+    }
+
+    section.resumo {
+        margin-top: 40px;
+    }
+
+    nav ul {
+        border: none;
+    }
+
+    nav ul li {
+        float: none;
+        border-bottom: solid #1a6e4d 2px;
+    }
+}
