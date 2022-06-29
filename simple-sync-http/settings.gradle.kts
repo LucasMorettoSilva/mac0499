@@ -1,0 +1,1 @@
+rootProject.name = "simple-sync-http"
