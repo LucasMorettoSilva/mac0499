@@ -1,7 +1,9 @@
 package br.usp.routes
 
+import br.usp.config.getHttpClient
 import br.usp.models.MessageRequest
 import br.usp.models.PingRequest
+import br.usp.utils.StringGenerator
 import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
@@ -20,18 +22,24 @@ fun Route.pingRouting() {
             val messageReq = call.receive<MessageRequest>()
 
             call.application.environment.log.info(
-                "pingRouting() : received message request of size {}",
+                "pingRouting() : received message request of size {} MB",
                 messageReq.sizeOfMessage
             )
 
-            val client = HttpClient() {
-                install(ContentNegotiation) {
-                    json()
-                }
-            }
+            val client = getHttpClient()
 
-            val response: HttpResponse = client.post("http://localhost:9086/ping") {
-                setBody(PingRequest("A".repeat(messageReq.sizeOfMessage.toInt())))
+            val hostUrl = call.application.environment
+                .config
+                .property("api.host.simpleSyncHttpResponse")
+                .getString()
+
+            val pingEndpoint = call.application.environment
+                .config
+                .property("api.endpoint.ping")
+                .getString()
+
+            val response: HttpResponse = client.post(hostUrl + pingEndpoint) {
+                setBody(PingRequest(StringGenerator.withSizeInMegaBytes(messageReq.sizeOfMessage)))
                 contentType(ContentType.Application.Json)
             }
 
@@ -41,6 +49,8 @@ fun Route.pingRouting() {
             )
 
             call.respond(HttpStatusCode.OK)
+
+            client.close()
         }
     }
 }

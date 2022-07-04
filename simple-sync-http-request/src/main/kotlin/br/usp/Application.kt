@@ -1,7 +1,8 @@
 package br.usp
 
+import br.usp.plugins.configureRouting
+import br.usp.plugins.configureSerialization
 import io.ktor.server.application.*
-import br.usp.plugins.*
 
 fun main(args: Array<String>): Unit =
     io.ktor.server.netty.EngineMain.main(args)
