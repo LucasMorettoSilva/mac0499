@@ -9,17 +9,18 @@ fun getQueueName(args: Array<String>): String {
     }
 }
 
-fun getMessage(args: Array<String>): String {
-    return if (args.isEmpty()) {
-        "default_message"
+fun getMessageSize(args: Array<String>): Double {
+    return if (args.isEmpty() || args.size < 2) {
+        0.01
     } else {
-        args[1]
+        args[1].toDouble()
     }
 }
 
 fun main(args: Array<String>) {
     val queueName = getQueueName(args)
-    val message = getMessage(args)
+    val messageSize = getMessageSize(args)
+    val message = StringGenerator.withSizeInMegaBytes(messageSize)
 
     val factory = ConnectionFactory()
 
