@@ -8,8 +8,6 @@ RUN ./gradlew clean build -x test
 
 FROM adoptopenjdk/openjdk8:alpine-jre
 
-ENV PORT 8080
-
 # Creating user
 ENV GID 1033
 ENV UID 1033
@@ -23,8 +21,6 @@ COPY --from=build --chown=$UID:$GID /app/build/libs/*all.jar /app/app.jar
 
 # Setting user to use when running the image
 USER $UID
-
-EXPOSE $PORT
 
 # Entrypoint definition
 ENTRYPOINT ["java", "-jar", "./app.jar"]

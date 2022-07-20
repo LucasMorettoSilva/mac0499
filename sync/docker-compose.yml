@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  simple-sync-http-request:
+    build: ./simple-sync-http-request
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      HOST_SIMPLE_SYNC_HTTP_RES: "http://simple-sync-http-response:9086"
+
+  simple-sync-http-response:
+    build: ./simple-sync-http-response
+    restart: unless-stopped
+    ports:
+      - "9086:9086"

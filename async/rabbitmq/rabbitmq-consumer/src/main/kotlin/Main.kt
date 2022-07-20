@@ -12,11 +12,18 @@ fun getQueueName(args: Array<String>): String {
     }
 }
 
+fun getBrokerHost(): String {
+    return System.getenv("BROKER_HOST") ?: return "amqp://guest:guest@localhost:5672/"
+}
+
 fun main(args: Array<String>) {
     val queueName = getQueueName(args)
+    val brokerHost = getBrokerHost()
+
+    println("broker =  $brokerHost")
 
     val factory = ConnectionFactory()
-    val connection = factory.newConnection("amqp://guest:guest@localhost:5672/")
+    val connection = factory.newConnection(getBrokerHost())
     val channel = connection.createChannel()
 
     val consumerTag = "SimpleConsumer"

@@ -8,7 +8,7 @@ RUN ./gradlew clean build -x test
 
 FROM adoptopenjdk/openjdk8:alpine-jre
 
-ENV PORT 8080
+ENV PORT 9086
 
 # Creating user
 ENV GID 1033

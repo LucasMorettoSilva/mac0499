@@ -1,9 +1,28 @@
-version: '3.7'
+version: "3.7"
 
 services:
   rabbitmq:
-      image: rabbitmq:3.10.5-management-alpine
-      hostname: rabbitmq-node
-      ports:
-        - '5672:5672'
-        - '15672:15672'
+    image: rabbitmq:3.10.5-management-alpine
+    restart: unless-stopped
+    container_name: "rabbitmq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  rabbitmq-producer:
+    build: ./rabbitmq-producer
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    environment:
+      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672/"
+    depends_on:
+      - rabbitmq
+
+#  rabbitmq-consumer:
+#    build: ./rabbitmq-consumer
+#    restart: unless-stopped
+#    environment:
+#      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672"
+#    depends_on:
+#      - rabbitmq

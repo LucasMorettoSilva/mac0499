@@ -1,3 +1,7 @@
+package br.usp.utils
+
+import io.ktor.utils.io.core.*
+
 class StringGenerator {
 
     companion object {
