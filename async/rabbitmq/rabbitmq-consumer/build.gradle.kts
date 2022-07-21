@@ -15,6 +15,7 @@ repositories {
 
 dependencies {
     implementation("com.rabbitmq:amqp-client:5.15.0")
+    implementation("org.slf4j:slf4j-nop:1.7.36")
     testImplementation(kotlin("test"))
 }
 
