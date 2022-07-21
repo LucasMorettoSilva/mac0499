@@ -19,10 +19,10 @@ services:
     depends_on:
       - rabbitmq
 
-#  rabbitmq-consumer:
-#    build: ./rabbitmq-consumer
-#    restart: unless-stopped
-#    environment:
-#      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672"
-#    depends_on:
-#      - rabbitmq
+  rabbitmq-consumer:
+    build: ./rabbitmq-consumer
+    restart: unless-stopped
+    environment:
+      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672"
+    depends_on:
+      - rabbitmq
