@@ -2,19 +2,14 @@ package br.usp.routes
 
 import br.usp.config.getHttpClient
 import br.usp.models.MessageRequest
-import br.usp.models.PingRequest
 import br.usp.utils.StringGenerator
-import io.ktor.client.*
 import io.ktor.client.request.*
 import io.ktor.client.statement.*
 import io.ktor.http.*
-import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
-import io.ktor.client.plugins.contentnegotiation.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
-import io.ktor.utils.io.core.*
 
 fun Route.pingRouting() {
     route("/ping") {
@@ -39,8 +34,8 @@ fun Route.pingRouting() {
                 .getString()
 
             val response: HttpResponse = client.post(hostUrl + pingEndpoint) {
-                setBody(PingRequest(StringGenerator.withSizeInMegaBytes(messageReq.sizeOfMessage)))
-                contentType(ContentType.Application.Json)
+                setBody(StringGenerator.withSizeInMegaBytes(messageReq.sizeOfMessage))
+                contentType(ContentType.Text.Plain)
             }
 
             call.application.environment.log.info(

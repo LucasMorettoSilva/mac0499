@@ -34,3 +34,40 @@ out/
 
 ### VS Code ###
 .vscode/
+
+# Vim
+# ---
+*.sw[nop]
+
+# Emacs
+# -----
+*~
+\#*\#
+.\#*
+
+# Textmate
+# --------
+.textmate
+
+# Sublime Text
+# ------------
+*.sublime-*
+
+# jEnv
+# ----
+.java-version
+
+# macOS
+# ----
+.DS_Store
+
+# HPROF
+# -----
+*.hprof
+
+# Logs
+# ----
+/*.log
+
+# Thread dumps for troubleshooting
+*.threaddump
