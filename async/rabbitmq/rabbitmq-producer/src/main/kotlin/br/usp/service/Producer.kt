@@ -2,8 +2,8 @@ package br.usp.service
 
 import br.usp.models.MessageRequest
 import br.usp.utils.StringGenerator
+import com.rabbitmq.client.Connection
 import com.rabbitmq.client.ConnectionFactory
-import io.ktor.utils.io.core.*
 import java.nio.charset.StandardCharsets
 import kotlin.text.toByteArray
 
@@ -11,14 +11,19 @@ class Producer {
 
     companion object {
 
+        private var connection: Connection? = null
+
         fun publish(brokerUrl: String, messageReq: MessageRequest) {
+            if (connection == null || !connection!!.isOpen) {
+                val factory = ConnectionFactory()
+
+                connection = factory.newConnection(brokerUrl)
+            }
+
             val message = StringGenerator
                 .withSizeInMegaBytes(messageReq.sizeOfMessage)
 
-            val factory = ConnectionFactory()
-
-            factory.newConnection(brokerUrl).use { connection ->
-                connection.createChannel().use { channel ->
+            connection!!.createChannel().use { channel ->
                     channel.queueDeclare(messageReq.queueName, false, false, false, null)
 
                     channel.basicPublish(
@@ -27,7 +32,6 @@ class Producer {
                         null,
                         message.toByteArray(StandardCharsets.UTF_8)
                     )
-                }
             }
         }
     }
