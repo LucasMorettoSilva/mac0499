@@ -26,7 +26,7 @@ fun Route.pingRouting() {
             Producer.publish(brokerUrl, messageReq)
 
             call.application.environment.log.info(
-                "pingRouting() : message sent"
+                "pingRouting() : process finished"
             )
 
             call.respond(HttpStatusCode.OK)

@@ -2,6 +2,7 @@ package br.usp.service
 
 import br.usp.models.MessageRequest
 import br.usp.utils.StringGenerator
+import com.rabbitmq.client.Channel
 import com.rabbitmq.client.Connection
 import com.rabbitmq.client.ConnectionFactory
 import java.nio.charset.StandardCharsets
@@ -13,25 +14,40 @@ class Producer {
 
         private var connection: Connection? = null
 
-        fun publish(brokerUrl: String, messageReq: MessageRequest) {
+        private var channel: Channel? = null
+
+        private fun createConnection(brokerUrl: String) {
             if (connection == null || !connection!!.isOpen) {
                 val factory = ConnectionFactory()
 
                 connection = factory.newConnection(brokerUrl)
             }
+        }
 
+        private fun establishConnection(brokerUrl: String, queueName: String) {
+            if (channel == null || !channel!!.isOpen) {
+                createConnection(brokerUrl)
+                channel = connection?.createChannel()
+                channel?.queueDeclare(queueName, false, false, false, null)
+            }
+        }
+
+        fun publish(brokerUrl: String, messageReq: MessageRequest) {
             val message = StringGenerator
-                .withSizeInMegaBytes(messageReq.sizeOfMessage)
+                .withSizeInMegaBytes(messageReq.messageSize)
+                .toByteArray(StandardCharsets.UTF_8)
 
-            connection!!.createChannel().use { channel ->
-                    channel.queueDeclare(messageReq.queueName, false, false, false, null)
+            for (i in 1..messageReq.times) {
+                establishConnection(brokerUrl, messageReq.queueName)
 
-                    channel.basicPublish(
-                        "",
-                        messageReq.queueName,
-                        null,
-                        message.toByteArray(StandardCharsets.UTF_8)
-                    )
+                channel?.basicPublish(
+                    "",
+                    messageReq.queueName,
+                    null,
+                    message
+                )
+
+                println("Message [$i] sent")
             }
         }
     }
