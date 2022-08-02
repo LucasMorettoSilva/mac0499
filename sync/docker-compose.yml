@@ -14,3 +14,11 @@ services:
     restart: unless-stopped
     ports:
       - "9086:9086"
+
+  prometheus:
+    build: ./prometheus
+    ports:
+      - "9090:9090"
+    depends_on:
+      - simple-sync-http-request
+      - simple-sync-http-response

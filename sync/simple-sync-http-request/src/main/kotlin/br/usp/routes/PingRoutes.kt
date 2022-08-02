@@ -18,7 +18,7 @@ fun Route.pingRouting() {
 
             call.application.environment.log.info(
                 "pingRouting() : received message request of size {} MB",
-                messageReq.sizeOfMessage
+                messageReq.messageSize
             )
 
             val client = getHttpClient()
@@ -33,19 +33,33 @@ fun Route.pingRouting() {
                 .property("api.endpoint.ping")
                 .getString()
 
-            val response: HttpResponse = client.post(hostUrl + pingEndpoint) {
-                setBody(StringGenerator.withSizeInMegaBytes(messageReq.sizeOfMessage))
-                contentType(ContentType.Text.Plain)
+            val message = StringGenerator
+                .withSizeInMegaBytes(messageReq.messageSize)
+
+            for (i in 1..messageReq.times) {
+                val response: HttpResponse = client.post(hostUrl + pingEndpoint) {
+                    setBody(message)
+                    contentType(ContentType.Text.Plain)
+                }
+
+                if (response.status != HttpStatusCode.OK) {
+                    call.application.environment.log.error(
+                        "unexpected failure : http status code : {} : body : {}",
+                        response.status,
+                        response.bodyAsText()
+                    )
+
+                    call.respond(HttpStatusCode.InternalServerError)
+                }
             }
 
             call.application.environment.log.info(
-                "successfully got response : http status code : {}",
-                response.status
+                "process finished"
             )
 
-            call.respond(HttpStatusCode.OK)
-
             client.close()
+
+            call.respond(HttpStatusCode.OK)
         }
     }
 }
