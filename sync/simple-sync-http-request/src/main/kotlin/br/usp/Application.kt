@@ -19,10 +19,10 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
+val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
     configureRouting()
     configureSerialization()
 
-    val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
     install(MicrometerMetrics) {
         registry = appMicrometerRegistry
         distributionStatisticConfig = DistributionStatisticConfig.Builder()
@@ -41,7 +41,8 @@ fun Application.module() {
     }
     routing {
         get("/metrics") {
-            call.respond(appMicrometerRegistry.scrape())
+            call.respondText(appMicrometerRegistry.scrape())
         }
     }
+    
 }
