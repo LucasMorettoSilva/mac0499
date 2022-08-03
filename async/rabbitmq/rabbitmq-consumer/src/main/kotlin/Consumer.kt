@@ -1,17 +1,25 @@
-import com.rabbitmq.client.CancelCallback
-import com.rabbitmq.client.ConnectionFactory
-import com.rabbitmq.client.DeliverCallback
-import com.rabbitmq.client.Delivery
+import com.rabbitmq.client.*
 import java.nio.charset.StandardCharsets
 
 class Consumer {
 
     companion object {
 
-        fun create(brokerHost: String, queueName: String) {
+        private fun createConnection(): Connection {
             val factory = ConnectionFactory()
-            val connection = factory.newConnection(brokerHost)
+
+            factory.username = AmqpConfig.getUser()
+            factory.password = AmqpConfig.getPass()
+            factory.host = AmqpConfig.getHost()
+            factory.port = AmqpConfig.getPort()
+
+            return factory.newConnection()
+        }
+
+        fun create() {
+            val connection = createConnection()
             val channel = connection.createChannel()
+            val queueName = AmqpConfig.getQueueName()
 
             val consumerTag = "SimpleConsumer"
 
