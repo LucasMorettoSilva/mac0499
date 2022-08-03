@@ -15,13 +15,13 @@ services:
     ports:
       - "8080:8080"
     environment:
-      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672/"
+      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672"
     depends_on:
       - rabbitmq
 
   rabbitmq-consumer:
     build: ./rabbitmq-consumer
     environment:
-      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672/"
+      BROKER_HOST: "amqp://guest:guest@rabbitmq:5672"
     depends_on:
       - rabbitmq

@@ -23,7 +23,12 @@ fun Route.pingRouting() {
                 .property("api.host.rabbitBroker")
                 .getString()
 
-            Producer.publish(brokerUrl, messageReq)
+            val queueName = call.application.environment
+                .config
+                .property("amqp.queue")
+                .getString()
+
+            Producer.publish(brokerUrl, messageReq, queueName)
 
             call.application.environment.log.info(
                 "pingRouting() : process finished"

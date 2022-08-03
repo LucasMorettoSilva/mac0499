@@ -32,17 +32,17 @@ class Producer {
             }
         }
 
-        fun publish(brokerUrl: String, messageReq: MessageRequest) {
+        fun publish(brokerUrl: String, messageReq: MessageRequest, queueName: String) {
             val message = StringGenerator
                 .withSizeInMegaBytes(messageReq.messageSize)
                 .toByteArray(StandardCharsets.UTF_8)
 
             for (i in 1..messageReq.times) {
-                establishConnection(brokerUrl, messageReq.queueName)
+                establishConnection(brokerUrl, queueName)
 
                 channel?.basicPublish(
                     "",
-                    messageReq.queueName,
+                    queueName,
                     null,
                     message
                 )
