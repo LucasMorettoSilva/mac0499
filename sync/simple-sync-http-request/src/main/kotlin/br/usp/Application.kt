@@ -6,9 +6,13 @@ import io.ktor.server.application.*
 import io.ktor.server.metrics.micrometer.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import io.micrometer.core.instrument.binder.jvm.ClassLoaderMetrics
 import io.micrometer.core.instrument.binder.jvm.JvmGcMetrics
 import io.micrometer.core.instrument.binder.jvm.JvmMemoryMetrics
+import io.micrometer.core.instrument.binder.jvm.JvmThreadMetrics
+import io.micrometer.core.instrument.binder.system.FileDescriptorMetrics
 import io.micrometer.core.instrument.binder.system.ProcessorMetrics
+import io.micrometer.core.instrument.binder.system.UptimeMetrics
 import io.micrometer.core.instrument.distribution.DistributionStatisticConfig
 import io.micrometer.prometheus.PrometheusConfig
 import io.micrometer.prometheus.PrometheusMeterRegistry
@@ -19,24 +23,22 @@ fun main(args: Array<String>): Unit =
 
 @Suppress("unused") // application.conf references the main function. This annotation prevents the IDE from marking it as unused.
 fun Application.module() {
-val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
     configureRouting()
     configureSerialization()
 
+    val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
+
     install(MicrometerMetrics) {
         registry = appMicrometerRegistry
-        distributionStatisticConfig = DistributionStatisticConfig.Builder()
-            .percentilesHistogram(true)
-            .maximumExpectedValue(Duration.ofSeconds(20).toNanos().toDouble())
-            .serviceLevelObjectives(
-                Duration.ofMillis(100).toNanos().toDouble(),
-                Duration.ofMillis(500).toNanos().toDouble()
-            )
-            .build()
+
         meterBinders = listOf(
+            ClassLoaderMetrics(),
             JvmMemoryMetrics(),
             JvmGcMetrics(),
             ProcessorMetrics(),
+            JvmThreadMetrics(),
+            FileDescriptorMetrics(),
+            UptimeMetrics()
         )
     }
     routing {
@@ -44,5 +46,4 @@ val appMicrometerRegistry = PrometheusMeterRegistry(PrometheusConfig.DEFAULT)
             call.respondText(appMicrometerRegistry.scrape())
         }
     }
-    
 }

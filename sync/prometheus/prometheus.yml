@@ -7,3 +7,4 @@ scrape_configs:
     static_configs:
       - targets:
           - simple-sync-http-request:8080
+          - simple-sync-http-response:9086
