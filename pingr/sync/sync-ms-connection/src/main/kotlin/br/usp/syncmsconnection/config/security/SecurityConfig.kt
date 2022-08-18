@@ -12,6 +12,9 @@ class SecurityConfig {
 
     @Bean
     fun filterChain(http: HttpSecurity): SecurityFilterChain {
-        return http.httpBasic().disable().build()
+        return http
+            .httpBasic().disable()
+            .csrf().disable()
+            .build()
     }
 }
