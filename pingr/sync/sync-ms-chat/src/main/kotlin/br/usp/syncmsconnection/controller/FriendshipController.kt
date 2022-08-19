@@ -1,7 +1,7 @@
 package br.usp.syncmsconnection.controller
 
 import br.usp.syncmsconnection.model.entity.Friendship
-import br.usp.syncmsconnection.service.friendship.SendMessageService
+import br.usp.syncmsconnection.service.message.SendMessageService
 import br.usp.syncmsconnection.service.friendship.FriendshipService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

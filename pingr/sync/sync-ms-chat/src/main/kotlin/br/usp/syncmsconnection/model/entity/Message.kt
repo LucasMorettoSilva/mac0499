@@ -1,6 +1,7 @@
 package br.usp.syncmsconnection.model.entity
 
 import org.hibernate.annotations.CreationTimestamp
+import org.hibernate.annotations.GenericGenerator
 import java.time.LocalDateTime
 import java.util.*
 import javax.persistence.*
@@ -10,20 +11,24 @@ import javax.persistence.*
 class Message(
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(
+        name = "uuid",
+        strategy = "org.hibernate.id.UUIDGenerator"
+    )
     @Column(name = "id")
-    var id: UUID,
+    var id: String? = null,
 
     @Column(name = "chat_id")
-    var chatId: UUID,
+    var chatId: String? = null,
 
     @Column(name = "user_email")
-    var userEmail: String,
+    var userEmail: String? = null,
 
     @Column(name = "content")
-    var content: String,
+    var content: String? = null,
 
     @CreationTimestamp
     @Column(name = "creation_date")
-    var creationDate: LocalDateTime
+    var creationDate: LocalDateTime? = null
 )
