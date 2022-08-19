@@ -10,7 +10,7 @@ import javax.validation.constraints.NotBlank
 
 @Entity
 @Table(name = "friendships")
-@IdClass(FriendshipId::class)
+@IdClass(ChatUsersId::class)
 class Friendship(
 
     @Id

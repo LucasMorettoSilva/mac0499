@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SyncMsConnectionApplication
+class SyncMsChatApplication
 
 fun main(args: Array<String>) {
-	runApplication<SyncMsConnectionApplication>(*args)
+	runApplication<SyncMsChatApplication>(*args)
 }

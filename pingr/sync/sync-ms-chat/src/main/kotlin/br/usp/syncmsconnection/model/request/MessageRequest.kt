@@ -3,11 +3,15 @@ package br.usp.syncmsconnection.model.request
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotBlank
 
-data class FriendshipRequest(
+data class MessageRequest(
     @NotBlank
-    @Email
-    val firstUserEmail: String,
+    val message: String,
 
     @NotBlank
     @Email
-    val secondUserEmail: String)
+    val senderEmail: String,
+
+    @NotBlank
+    @Email
+    val recipientEmail: String
+)

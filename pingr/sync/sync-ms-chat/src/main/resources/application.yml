@@ -11,7 +11,7 @@ springdoc:
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/postgres
+    url: jdbc:postgresql://localhost:5433/postgres
     username: postgres
     password: postgres
     hikari:
@@ -21,3 +21,9 @@ spring:
     hibernate:
       ddl-auto: none
     show-sql: false
+
+api:
+  host:
+    sync-ms-connection: http://localhost:8080
+  endpoint:
+    get-friendship: /friendships/{email1}/user/{email2}

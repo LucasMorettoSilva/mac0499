@@ -1,12 +1,12 @@
 package br.usp.syncmsconnection.service.user
 
-import br.usp.syncmsconnection.repository.UserRepository
+import br.usp.syncmsconnection.repository.ChatRepository
 import org.springframework.stereotype.Service
 
 @Service
 class UserServiceImpl(
-    private val userRepository: UserRepository): UserService {
+    private val chatRepository: ChatRepository): UserService {
 
     override fun existsByEmail(email: String): Boolean =
-        userRepository.existsById(email)
+        chatRepository.existsById(email)
 }
