@@ -14,4 +14,10 @@ interface ChatService {
     fun findById(id: String): Chat?
 
     fun findFullChatById(id: String): FullChat
+
+    fun findAll(): List<Chat>
+
+    fun findFullChatBetweenUsers(
+        userEmail1: String,
+        userEmail2: String): FullChat
 }

@@ -16,6 +16,9 @@ class ChatServiceImpl(
     private val chatRepository: ChatRepository
 ): ChatService {
 
+    override fun findAll(): List<Chat> =
+        chatRepository.findAll()
+
     override fun createNewChat(): Chat = save(Chat())
 
     override fun save(chat: Chat): Chat =
@@ -36,5 +39,19 @@ class ChatServiceImpl(
             chatUsersService.findAllUsersFromChat(id),
             messageService.findByChatId(id)
         )
+    }
+
+    override fun findFullChatBetweenUsers(
+        userEmail1: String,
+        userEmail2: String): FullChat {
+        val commonChatId = chatUsersService.findCommonChatId(
+            userEmail1,
+            userEmail2
+        ) ?: throw ResponseStatusException(
+            HttpStatus.NOT_FOUND,
+            "chat not found"
+        )
+
+        return findFullChatById(commonChatId)
     }
 }
