@@ -13,5 +13,5 @@ class MessageServiceImpl(
         messageRepository.save(message)
 
     override fun findByChatId(chatId: String): List<Message> =
-        messageRepository.findByChatIdOrderByCreationDate(chatId)
+        messageRepository.findByChatIdOrderByCreationDateDesc(chatId)
 }

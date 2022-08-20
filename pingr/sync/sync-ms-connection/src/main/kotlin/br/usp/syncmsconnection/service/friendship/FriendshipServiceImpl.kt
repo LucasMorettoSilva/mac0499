@@ -4,7 +4,9 @@ import br.usp.syncmsconnection.model.entity.Friendship
 import br.usp.syncmsconnection.model.entity.FriendshipId
 import br.usp.syncmsconnection.repository.FriendshipRepository
 import org.springframework.data.repository.findByIdOrNull
+import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
+import org.springframework.web.server.ResponseStatusException
 
 @Service
 class FriendshipServiceImpl(
@@ -40,6 +42,9 @@ class FriendshipServiceImpl(
 
         return friendshipRepo.findByIdOrNull(
             FriendshipId(userEmail2, userEmail1)
+        ) ?: throw ResponseStatusException(
+            HttpStatus.NOT_FOUND,
+            "friendship between users not found"
         )
     }
 }

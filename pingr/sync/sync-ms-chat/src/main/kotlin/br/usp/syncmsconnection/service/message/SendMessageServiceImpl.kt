@@ -18,17 +18,17 @@ class SendMessageServiceImpl(
     private val messageService: MessageService
 ) : SendMessageService {
 
-    override fun sendMessage(messageReq: MessageRequest) {
+    override fun sendMessage(messageReq: MessageRequest): Message {
         validateFriendshipExistence(messageReq)
 
         val commonChat = createOrGetCommonChat(messageReq)
 
         val msg = Message()
         msg.chatId = commonChat?.id
-        msg.userEmail = messageReq.senderEmail
+        msg.sender = messageReq.senderEmail
         msg.content = messageReq.message
 
-        messageService.save(msg)
+        return messageService.save(msg)
     }
 
     private fun validateFriendshipExistence(messageRequest: MessageRequest) {

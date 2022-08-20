@@ -3,7 +3,6 @@ package br.usp.syncmsconnection.model.entity
 import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.GenericGenerator
 import java.time.LocalDateTime
-import java.util.*
 import javax.persistence.*
 
 @Entity
@@ -22,8 +21,8 @@ class Message(
     @Column(name = "chat_id")
     var chatId: String? = null,
 
-    @Column(name = "user_email")
-    var userEmail: String? = null,
+    @Column(name = "sender")
+    var sender: String? = null,
 
     @Column(name = "content")
     var content: String? = null,

@@ -13,7 +13,7 @@ create table chats_users(
 create table messages(
     id varchar not null primary key,
     chat_id varchar not null,
-    user_email varchar not null,
+    sender varchar not null,
     content text,
     creation_date timestamp default now()
 );

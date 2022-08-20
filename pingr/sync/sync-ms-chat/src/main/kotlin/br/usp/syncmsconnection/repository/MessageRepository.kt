@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository
 @Repository
 interface MessageRepository : JpaRepository<Message, String> {
 
-    fun findByChatIdOrderByCreationDate(chatId: String): List<Message>
+    fun findByChatIdOrderByCreationDateDesc(chatId: String): List<Message>
 }

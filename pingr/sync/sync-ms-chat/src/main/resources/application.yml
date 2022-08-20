@@ -1,6 +1,7 @@
 server:
   compression:
     enabled: true
+  port: 9086
 
 springdoc:
   swagger-ui:
@@ -26,4 +27,4 @@ api:
   host:
     sync-ms-connection: http://localhost:8080
   endpoint:
-    get-friendship: /friendships/{email1}/user/{email2}
+    get-friendship: /api/friendship/{email1}/user/{email2}
