@@ -10,7 +10,7 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./user/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/user/init.sql:/docker-entrypoint-initdb.d/init.sql
 
   db-chat:
     image: postgres:14-alpine
@@ -20,4 +20,12 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - ./chat/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./db/chat/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  sync-ms-connection:
+    build: ./sync/sync-ms-connection
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db-user
