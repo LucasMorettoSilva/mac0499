@@ -3,6 +3,7 @@ version: "3.7"
 services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
     restart: unless-stopped
     ports:
       - "5672:5672"
@@ -35,6 +36,7 @@ services:
       - "8080:8080"
     depends_on:
       - db-user
+      - rabbitmq
 
   async-ms-chat:
     build: ./async-ms-chat
@@ -43,3 +45,5 @@ services:
       - "9086:9086"
     depends_on:
       - db-chat
+      - rabbitmq
+      - async-ms-connection
