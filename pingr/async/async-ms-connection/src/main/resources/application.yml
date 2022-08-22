@@ -1,0 +1,33 @@
+server:
+  compression:
+    enabled: true
+
+springdoc:
+  swagger-ui:
+    operationsSorter: alpha
+    tagsSorter: alpha
+    disable-swagger-default-url: true
+    path: "/"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: postgres
+    hikari:
+      connection-timeout: 20000 # milliseconds
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+amqp:
+  new-friendship:
+    queue:
+      name: new-friendship
