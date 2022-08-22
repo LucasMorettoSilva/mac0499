@@ -31,7 +31,7 @@ COPY --chown=gradle:gradle . .
 # cache these dependencies to speed up containers that execute gradle tasks.
 
 # Force gradle to download dependencies to build, lint and test code
-RUN gradle --no-build-cache clean -x test
+RUN gradle ${GRADLE_OPTS} --no-build-cache clean -x test
 
 ################################################################################
 #                                BUILDER IMAGE                                 #
