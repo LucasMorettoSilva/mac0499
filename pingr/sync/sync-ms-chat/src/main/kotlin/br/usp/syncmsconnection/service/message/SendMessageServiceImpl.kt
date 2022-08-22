@@ -6,6 +6,8 @@ import br.usp.syncmsconnection.model.request.MessageRequest
 import br.usp.syncmsconnection.service.chat.ChatService
 import br.usp.syncmsconnection.service.chat.ChatUsersService
 import br.usp.syncmsconnection.service.friendship.FriendshipService
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
@@ -18,7 +20,11 @@ class SendMessageServiceImpl(
     private val messageService: MessageService
 ) : SendMessageService {
 
+    val log: Logger = LoggerFactory.getLogger(this::class.java)
+
     override fun sendMessage(messageReq: MessageRequest): Message {
+        log.info("sendMessage() : messageRequest : {}", messageReq)
+
         validateFriendshipExistence(messageReq)
 
         val commonChat = createOrGetCommonChat(messageReq)
@@ -32,6 +38,8 @@ class SendMessageServiceImpl(
     }
 
     private fun validateFriendshipExistence(messageRequest: MessageRequest) {
+        log.info("validateFriendshipExistence() : messageRequest : {}", messageRequest)
+
         val usersAreFriends = friendshipService.exists(
             messageRequest.senderEmail,
             messageRequest.recipientEmail
@@ -52,6 +60,8 @@ class SendMessageServiceImpl(
         )
 
         if (commonChatId == null) {
+            log.info("createOrGetCommonChat() : chat between users does not exists")
+
             val commonChat = chatService.createNewChat()
 
             chatUsersService.addUserToChat(

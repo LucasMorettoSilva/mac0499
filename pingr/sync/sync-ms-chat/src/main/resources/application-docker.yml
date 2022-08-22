@@ -1,8 +1,12 @@
 spring:
   datasource:
-    url: jdbc:postgresql://db-chat:5433/postgres
+    url: jdbc:postgresql://db-chat:5432/postgres
     username: postgres
     password: postgres
     hikari:
       connection-timeout: 20000 # milliseconds
       maximum-pool-size: 5
+
+api:
+  host:
+    sync-ms-connection: http://sync-ms-connection:8080
