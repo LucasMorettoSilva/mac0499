@@ -41,7 +41,7 @@ RUN gradle ${GRADLE_OPTS} --no-build-cache clean -x test
 FROM base AS builder
 
 # Use gradle wrapper to generate an uber JAR
-RUN gradle --no-daemon bootJar
+RUN gradle ${GRADLE_OPTS} bootJar
 
 ################################################################################
 #                               PRODUCTION IMAGE                               #
@@ -51,11 +51,24 @@ FROM eclipse-temurin:8-jre-alpine as runner
 
 ARG APP_DIR=/home/gradle/app
 
+ARG RUN_DIR=/app
+
 ENV PROFILE docker
 
 ENV JAVA_OPTS -Dspring.profiles.active=${PROFILE}
 
-COPY --from=builder ${APP_DIR}/build/libs/*.jar \
-                    /bin/runner/app.jar
+# Creating user
+ENV GID 1033
+ENV UID 1033
 
-ENTRYPOINT java ${JAVA_OPTS} -jar /bin/runner/app.jar
+WORKDIR ${RUN_DIR}
+
+RUN addgroup -S $GID && adduser -S $UID -G $GID
+
+COPY --from=builder --chown=$UID:$GID ${APP_DIR}/build/libs/*.jar \
+                    ${RUN_DIR}/app.jar
+
+# Setting user to use when running the image
+USER $UID
+
+ENTRYPOINT java ${JAVA_OPTS} -jar ./app.jar
