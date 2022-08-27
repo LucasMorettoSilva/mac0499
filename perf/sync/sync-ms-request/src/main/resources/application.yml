@@ -1,0 +1,8 @@
+files:
+  path: /home/lucas/app/usp/mac0499/perf/msg-files/
+
+api:
+  host:
+    sync-ms-response: http://localhost:9086
+  endpoint:
+    ping: /api/ping
