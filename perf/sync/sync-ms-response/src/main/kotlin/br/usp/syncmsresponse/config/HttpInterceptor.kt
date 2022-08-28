@@ -4,6 +4,7 @@ import br.usp.syncmsresponse.enums.CustomHeaders
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.web.servlet.HandlerInterceptor
+import org.springframework.web.servlet.ModelAndView
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 
@@ -27,13 +28,13 @@ class HttpInterceptor: HandlerInterceptor {
         return true
     }
 
-    override fun afterCompletion(
+    override fun postHandle(
         request: HttpServletRequest,
         response: HttpServletResponse,
         handler: Any,
-        ex: Exception?
+        modelAndView: ModelAndView?
     ) {
-        log.info("afterCompletion() : new response sent")
+        log.info("postHandle() : new response sent")
 
         val sendTime = System.currentTimeMillis()
 

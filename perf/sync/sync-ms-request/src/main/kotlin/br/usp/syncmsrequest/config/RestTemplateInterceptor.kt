@@ -19,12 +19,12 @@ class RestTemplateInterceptor : ClientHttpRequestInterceptor {
 
         val response: ClientHttpResponse = execution.execute(request, body)
 
-        val receiveResponseTime = System.currentTimeMillis()
-
         response.headers.add(
             CustomHeaders.REQ_SEND_TIME.value,
             sendRequestTime.toString()
         )
+
+        val receiveResponseTime = System.currentTimeMillis()
 
         response.headers.add(
             CustomHeaders.RES_RECEIVE_TIME.value,
