@@ -7,7 +7,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ../../msg-files:/app/msg-files
+      - ../msg-files:/app/msg-files
 
   sync-ms-response:
     build: ./sync-ms-response

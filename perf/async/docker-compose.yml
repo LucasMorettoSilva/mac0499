@@ -17,7 +17,7 @@ services:
     depends_on:
       - rabbitmq
     volumes:
-      - ../../msg-files:/app/msg-files
+      - ../msg-files:/app/msg-files
 
   async-ms-response:
     build: ./async-ms-response

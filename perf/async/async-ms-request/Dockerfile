@@ -63,7 +63,8 @@ ENV UID 1033
 
 WORKDIR ${RUN_DIR}
 
-RUN addgroup -S $GID && adduser -S $UID -G $GID
+RUN addgroup -S $GID && adduser -S $UID -G $GID && \
+    chown -R ${UID} ${RUN_DIR}
 
 COPY --from=builder --chown=$UID:$GID ${APP_DIR}/build/libs/*.jar \
                     ${RUN_DIR}/app.jar
