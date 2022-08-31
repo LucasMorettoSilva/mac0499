@@ -15,16 +15,16 @@ class AmqpQueueConfig(
     @Bean
     fun queue(): Queue = Queue(amqpProps.queueName, true)
 
-    @Bean
-    fun connectionFactory(): ConnectionFactory? {
-        val connectionFactory = CachingConnectionFactory(
-            amqpProps.host,
-            amqpProps.port.toInt()
-        )
-
-        connectionFactory.username = amqpProps.username
-        connectionFactory.setPassword(amqpProps.password)
-
-        return connectionFactory
-    }
+//    @Bean
+//    fun connectionFactory(): ConnectionFactory? {
+//        val connectionFactory = CachingConnectionFactory(
+//            amqpProps.host,
+//            amqpProps.port.toInt()
+//        )
+//
+//        connectionFactory.username = amqpProps.username
+//        connectionFactory.setPassword(amqpProps.password)
+//
+//        return connectionFactory
+//    }
 }
