@@ -1,0 +1,8 @@
+files:
+  path: /app/msg-files/
+
+api:
+  host:
+    sync-ms-response: http://sync-ms-response:9086
+  endpoint:
+    ping: /api/ping

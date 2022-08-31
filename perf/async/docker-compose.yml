@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  async-ms-request:
+    build: ./async-ms-request
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+    volumes:
+      - ../../msg-files:/app/msg-files
+
+  async-ms-response:
+    build: ./async-ms-response
+    restart: unless-stopped
+    ports:
+      - "9086:9086"
+    depends_on:
+      - rabbitmq

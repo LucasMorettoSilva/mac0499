@@ -1,0 +1,16 @@
+version: "3.7"
+
+services:
+  sync-ms-request:
+    build: ./sync-ms-request
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ../../msg-files:/app/msg-files
+
+  sync-ms-response:
+    build: ./sync-ms-response
+    restart: unless-stopped
+    ports:
+      - "9086:9086"

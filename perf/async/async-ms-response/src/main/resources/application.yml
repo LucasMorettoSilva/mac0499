@@ -1,0 +1,26 @@
+server:
+  compression:
+    enabled: true
+  port: 9086
+
+springdoc:
+  swagger-ui:
+    operationsSorter: alpha
+    tagsSorter: alpha
+    disable-swagger-default-url: true
+    path: "/"
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+
+amqp:
+  queue:
+    name: default
