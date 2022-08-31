@@ -1,5 +1,6 @@
 package br.usp.asyncmsrequest.service
 
+import br.usp.asyncmsrequest.config.AmqpMessagePostProcessor
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 import org.springframework.amqp.core.Queue
@@ -16,6 +17,10 @@ class AmqpProducer(
 
     fun publish(msg: String) {
         log.info("publish() : publishing message")
+
+        rabbitTemplate.setBeforePublishPostProcessors(
+            AmqpMessagePostProcessor()
+        )
 
         rabbitTemplate.convertAndSend(
             queue.name,
