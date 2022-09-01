@@ -4,7 +4,7 @@ import br.usp.asyncmsrequest.enums.CustomHeaders
 import org.springframework.amqp.core.Message
 import org.springframework.amqp.core.MessagePostProcessor
 
-class AmqpMessagePostProcessor: MessagePostProcessor {
+class AmqpBeforePublishProcessor: MessagePostProcessor {
 
     override fun postProcessMessage(message: Message): Message {
         message.messageProperties.setHeader(

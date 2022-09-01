@@ -2,7 +2,9 @@ package br.usp.asyncmsresponse.service
 
 import org.slf4j.Logger
 import org.slf4j.LoggerFactory
+import org.springframework.amqp.core.Message
 import org.springframework.amqp.rabbit.annotation.RabbitListener
+import org.springframework.amqp.rabbit.core.RabbitTemplate
 import org.springframework.messaging.handler.annotation.Header
 import org.springframework.stereotype.Service
 
@@ -17,6 +19,8 @@ class AmqpConsumer {
 
         val reqReceiveTime = System.currentTimeMillis()
 
-        return "$reqSendTime-$reqReceiveTime"
+        val resSendTime = System.currentTimeMillis()
+
+        return "$reqSendTime-$reqReceiveTime-$resSendTime"
     }
 }

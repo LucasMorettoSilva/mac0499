@@ -21,7 +21,7 @@ class RunExperimentsService(
 
             val response = amqpProducer.publish(msg)
 
-//            PerfTrace.log(msgSize, response.headers)
+            PerfTrace.log(msgSize, response)
         }
 
         log.info("run() : finished experiments")
