@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class SyncMsRequestApplication
+class SyncMsResponseApplication
 
 fun main(args: Array<String>) {
-    runApplication<SyncMsRequestApplication>(*args)
+    runApplication<SyncMsResponseApplication>(*args)
 }
