@@ -6,3 +6,13 @@ api:
     sync-ms-response: http://localhost:9086
   endpoint:
     ping: /api/ping
+
+spring:
+  servlet:
+    multipart:
+      max-request-size: 1GB
+
+server:
+  tomcat:
+    max-swallow-size: 1GB
+    max-http-form-post-size: 1GB

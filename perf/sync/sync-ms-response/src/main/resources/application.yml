@@ -1,2 +1,10 @@
+spring:
+  servlet:
+    multipart:
+      max-request-size: 1GB
+
 server:
   port: 9086
+  tomcat:
+    max-swallow-size: 1GB
+    max-http-form-post-size: 1GB

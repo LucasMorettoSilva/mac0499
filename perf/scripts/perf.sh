@@ -27,7 +27,7 @@ case "$OSTYPE" in
   *)        echo "unknown: $OSTYPE" ;;
 esac
 
-MSG_SIZES=('0.5' '1' '2')
+MSG_SIZES=('1' '2' '4' '8' '16' '32' '64' '128' '256' '512')
 MEASUREMENTS=30
 
 RESULTS='./results'
@@ -41,8 +41,8 @@ done
 if [ -z "${DOCKER_CONTAINER_ID}" ]
 then
     echo "copying measures from local folder..."
-    cp ${EXPATH} ${RESULTS}/measures.csv
+    cp ${EXPATH} ${RESULTS}/"${APP_MODE}-measures.csv"
 else
     echo "copying measures from container..."
-    docker cp ${DOCKER_CONTAINER_ID}:${DOCKER_PATH} ${RESULTS}/measures.csv
+    docker cp ${DOCKER_CONTAINER_ID}:${DOCKER_PATH} ${RESULTS}/"${APP_MODE}-docker-measures.csv"
 fi
