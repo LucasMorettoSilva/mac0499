@@ -5,6 +5,7 @@ import time
 default_output_file = "measures.csv"
 default_api_url = "http://localhost:9086/api/chats/messages"
 default_runs = 50
+default_interval = 2
 
 
 class Stopwatch:
@@ -49,6 +50,7 @@ def run_experiments(api_url, runs):
     for i in range(runs):
         print(f"running experiment {i} of {runs}...")
         measures.append(call_api(api_url))
+        time.sleep(default_interval)
 
     return measures
 
