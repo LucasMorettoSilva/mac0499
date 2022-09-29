@@ -18,3 +18,7 @@ insert into users (email, first_name, last_name)
         ('user1@email.com', 'user1', 'user 1 last name'),
         ('user2@email.com', 'user2', 'user 2 last name'),
         ('user3@email.com', 'user3', 'user 3 last name');
+
+insert into friendships (user_email_1, user_email_2)
+    values
+        ('user1@email.com', 'user2@email.com');

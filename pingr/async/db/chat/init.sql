@@ -23,3 +23,7 @@ create table friendships(
     user_email_2 varchar(255) not null,
     primary key (user_email_1, user_email_2)
 );
+
+insert into friendships (user_email_1, user_email_2)
+    values
+        ('user1@email.com', 'user2@email.com');

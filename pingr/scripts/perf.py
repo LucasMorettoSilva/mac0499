@@ -1,11 +1,25 @@
 import argparse
 import requests
 import time
+import numpy as np
 
 default_output_file = "measures.csv"
 default_api_url = "http://localhost:9086/api/chats/messages"
-default_runs = 50
+default_runs = 31
+default_exp = 30
 default_interval = 2
+
+
+class PerfStats:
+
+    def __init__(self, measures):
+        self.samples = 1.0 * np.array(measures)
+        self.mean = np.mean(self.samples)
+        self.std = np.std(self.samples)
+        self.ci = 1.96 * self.std
+
+    def __str__(self):
+        return f"{self.mean},{self.std},{self.ci}"
 
 
 class Stopwatch:
@@ -41,18 +55,33 @@ def call_api(api_url):
         print(f"[-][-] call failed : {response}")
         exit(1)
 
-    return stopwatch
+    return stopwatch.elapsed_time
 
 
-def run_experiments(api_url, runs):
-    measures = []
+def run_experiments(api_url, runs, exp):
+    stats = []
 
-    for i in range(runs):
-        print(f"running experiment {i} of {runs}...")
-        measures.append(call_api(api_url))
-        time.sleep(default_interval)
+    for e in range(exp):
+        measures = []
+        for i in range(runs):
+            print(f"running experiment {e} [run {i} of {runs}]...")
+            measures.append(call_api(api_url))
+            time.sleep(default_interval)
+        stats.append(PerfStats(measures[1:]))
 
-    return measures
+    return stats
+
+
+def save_stats(filename, measures):
+    print(f"writing stats in file: {filename}")
+
+    with open(filename, 'w') as file:
+        file.write("mean,std,ci\n")
+
+        for m in measures:
+            file.write(f"{m}\n")
+
+    print("finished writing file")
 
 
 def save_measures(filename, measures):
@@ -77,8 +106,14 @@ def main():
     )
 
     parser.add_argument(
+        '--exp',
+        help='how many experiments should run',
+        default=default_exp
+    )
+
+    parser.add_argument(
         '--runs',
-        help='how many measurements should be done',
+        help='how many measurements should be done by experiment',
         default=default_runs
     )
 
@@ -91,10 +126,11 @@ def main():
     url_arg = parser.parse_args().url
     output_file = parser.parse_args().output
     runs = parser.parse_args().runs
+    exp = parser.parse_args().exp
 
     try:
-        measures = run_experiments(url_arg, runs)
-        save_measures(output_file, measures)
+        measures = run_experiments(url_arg, runs, exp)
+        save_stats(output_file, measures)
 
         print("Process completed")
     except Exception as e:
