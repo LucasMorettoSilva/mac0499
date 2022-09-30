@@ -100,11 +100,11 @@ FROM eclipse-temurin:8-jre-alpine as runner
 
 ARG APP_DIR=/home/gradle/app
 
-ARG RUN_DIR=/app
-ARG RUN_DIR1=${RUN_DIR}/app1
-ARG RUN_DIR2=${RUN_DIR}/app2
+ARG SOURCE_WRAPPER=./wrapper
 
-ENV PROFILE docker
+ARG RUN_DIR=/app
+
+ENV PROFILE sdocker
 
 ENV JAVA_OPTS -Dspring.profiles.active=${PROFILE}
 
@@ -116,17 +116,18 @@ RUN addgroup -S $GID && adduser -S $UID -G $GID
 
 WORKDIR ${RUN_DIR}
 
-RUN mkdir -p ${RUN_DIR1} ${RUN_DIR2}
-
 COPY --from=builder1 --chown=$UID:$GID ${APP_DIR}/build/libs/*.jar \
-                    ${RUN_DIR1}/app.jar
+                    ${RUN_DIR}/app1.jar
 
 COPY --from=builder2 --chown=$UID:$GID ${APP_DIR}/build/libs/*.jar \
-                    ${RUN_DIR2}/app.jar
+                    ${RUN_DIR}/app2.jar
 
-COPY --chown=$UID:$GID wrapper/wrapper.sh .
+COPY --chown=$UID:$GID ${SOURCE_WRAPPER} ./
+
+
+RUN chmod a+x ./wrapper.sh
 
 # Setting user to use when running the image
 USER $UID
 
-CMD ./wrapper.sh ${JAVA_OPTS} ${RUN_DIR1}/app.jar ${RUN_DIR2}/app.jar
+CMD sh ./wrapper.sh ${JAVA_OPTS} app1.jar app2.jar

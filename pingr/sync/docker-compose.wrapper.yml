@@ -29,6 +29,7 @@ services:
       args:
         SOURCE_APP_1: ./sync-ms-connection/
         SOURCE_APP_2: ./sync-ms-chat/
+        SOURCE_WRAPPER: ./wrapper/
     restart: unless-stopped
     ports:
       - "8080:8080"

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -x
+
 JAVA_OPTS=$1
 APP1=$2
 APP2=$3
