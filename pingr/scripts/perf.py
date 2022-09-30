@@ -12,14 +12,15 @@ default_interval = 2
 
 class PerfStats:
 
-    def __init__(self, measures):
+    def __init__(self, index, measures):
         self.samples = 1.0 * np.array(measures)
         self.mean = np.mean(self.samples)
         self.std = np.std(self.samples)
-        self.ci = 1.96 * self.std
+        self.ci = 1.96 * (self.std / np.sqrt(len(self.samples)))
+        self.index = index
 
     def __str__(self):
-        return f"{self.mean},{self.std},{self.ci}"
+        return f"{self.index},{self.mean},{self.std},{self.ci}"
 
 
 class Stopwatch:
@@ -67,7 +68,7 @@ def run_experiments(api_url, runs, exp):
             print(f"running experiment {e} [run {i} of {runs}]...")
             measures.append(call_api(api_url))
             time.sleep(default_interval)
-        stats.append(PerfStats(measures[1:]))
+        stats.append(PerfStats(e, measures[1:]))
 
     return stats
 
@@ -76,7 +77,7 @@ def save_stats(filename, measures):
     print(f"writing stats in file: {filename}")
 
     with open(filename, 'w') as file:
-        file.write("mean,std,ci\n")
+        file.write("i,mean,std,ci\n")
 
         for m in measures:
             file.write(f"{m}\n")
