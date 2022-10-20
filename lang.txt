@@ -1,0 +1,11 @@
+lang,rabbit,rabbit-lib,http,http-lib,kafka,kafka-lib
+Python,1,http://pypi.python.org/pypi/pika,1,https://requests.readthedocs.io/,1,https://github.com/dpkp/kafka-python
+C,1,https://github.com/alanxz/rabbitmq-c,1,https://www.libhttp.org/,1,https://github.com/edenhill/librdkafka
+C++,1,https://github.com/akalend/amqpcpp,1,https://www.libhttp.org/,1,https://github.com/edenhill/librdkafka
+C#,1,https://www.rabbitmq.com/dotnet.html,1,https://github.com/restsharp/RestSharp,1,https://github.com/microsoft/CSharpClient-for-Kafka
+Java,1,https://www.rabbitmq.com/java-client.html,1,https://hc.apache.org/httpcomponents-client-4.5.x/index.html,1,https://mvnrepository.com/artifact/org.apache.kafka/kafka-clients
+SQL,1,https://github.com/pmq/rabbitmq-oracle-stored-procedures,1,https://sqlhttp.net/documentation/http/httprequest/,https://hevodata.com/learn/connect-apache-kafka-to-sql-server/#method2
+Javascript,1,https://github.com/amqp-node/amqplib,1,https://github.com/axios/axios,1,https://kafka.js.org/
+R,1,https://rdrr.io/rforge/messageQueue/man/messageQueue-package.html,1,https://cran.r-project.org/web/packages/crul/crul.pdf,1,https://cran.r-project.org/web/packages/rkafka/vignettes/rkafka.pdf
+
+

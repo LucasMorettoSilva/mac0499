@@ -1,0 +1,46 @@
+version: "3.7"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    restart: unless-stopped
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  db-user:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db/user/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  db-chat:
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - ./db/chat/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  wrapper:
+    build: 
+      context: .
+      dockerfile: ./wrapper/Dockerfile
+      args:
+        SOURCE_APP_1: ./async-ms-connection/
+        SOURCE_APP_2: ./async-ms-chat/
+        SOURCE_WRAPPER: ./wrapper/
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "9086:9086"
+    depends_on:
+      - db-user
+      - db-chat
+      - rabbitmq
