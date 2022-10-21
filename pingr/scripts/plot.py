@@ -5,10 +5,11 @@ import pandas as pd
 class MeasureDataFrames:
 
     def __init__(self):
-        self.df_sync = pd.read_csv("./measures-sync.csv")
-        self.df_async = pd.read_csv("./measures-async.csv")
-        self.df_sync_docker = pd.read_csv("./measures-sync-docker.csv")
-        self.df_async_docker = pd.read_csv("./measures-async-docker.csv")
+        self.df_sync_single_vm = pd.read_csv("./sync-measures-single-vm.csv")
+        self.df_async_single_vm = pd.read_csv("./async-measures-single-vm.csv")
+        self.df_sync_diff_vm = pd.read_csv("./sync-measures-diff-vm.csv")
+        self.df_async_diff_vm = pd.read_csv("./async-measures-diff-vm.csv")
+        self.df_merge = pd.read_csv("./final-measures.csv")
         self.new_sync = pd.read_csv("./new-measures-sync.csv")
 
     def plot(self):
@@ -17,54 +18,50 @@ class MeasureDataFrames:
         self.plot_sync(axes)
         self.plot_async(axes)
 
+    def box(self):
+        self.box_sync()
+
+    def show(self):
+        plt.show()
+
+    def box_sync(self):
+        self.df_merge.boxplot(
+            by='experiment-type',
+            column=['mean'],
+            grid=False
+        )
+
     def plot_sync(self, axes=plt.gca()):
-        self.df_sync.rolling(3, win_type='gaussian').mean(std=1).plot(
+        self.df_sync_single_vm.rolling(3, win_type='gaussian').mean(std=1).plot(
             kind='line',
-            y='elapsed_time',
-            label='sync-local',
+            y='mean',
+            label='sync-single-vm',
             ax=axes
         )
 
-        # self.df_sync_docker.rolling(3, win_type='gaussian').mean(std=1).plot(
-        #     kind='line',
-        #     y='elapsed_time',
-        #     ax=axes,
-        #     label='sync-docker',
-        #     title='Total request time to complete',
-        #     ylabel='total time (ms)',
-        # )
-
-    def plot_async(self, axes=plt.gca()):
-        self.df_async.rolling(3, win_type='gaussian').mean(std=1).plot(
+        self.df_sync_diff_vm.rolling(3, win_type='gaussian').mean(std=1).plot(
             kind='line',
-            y='elapsed_time',
-            label='async-local',
-            ax=axes
-        )
-
-        self.df_async_docker.rolling(3, win_type='gaussian').mean(std=1).plot(
-            kind='line',
-            y='elapsed_time',
+            y='mean',
             ax=axes,
-            label='async-docker',
-            title='Total request time to complete',
+            label='sync-diff-vm',
+            title='Total request time per experiment',
             ylabel='total time (ms)',
         )
 
-    def plot_async_gaussian(self, axes=plt.gca()):
-        self.df_async.rolling(3, win_type='gaussian').mean(std=1).plot(
+    def plot_async(self, axes=plt.gca()):
+        self.df_async_single_vm.rolling(3, win_type='gaussian').mean(std=1).plot(
             kind='line',
-            y='elapsed_time',
-            label='async-local',
+            y='mean',
+            label='async-single-vm',
             ax=axes
         )
 
-        self.df_async_docker.rolling(3, win_type='gaussian').mean(std=1).plot(
+        self.df_async_diff_vm.rolling(3, win_type='gaussian').mean(std=1).plot(
             kind='line',
-            y='elapsed_time',
+            y='mean',
             ax=axes,
-            label='async-docker',
-            title='Total request time to complete',
+            label='async-diff-vm',
+            title='Total request time per experiment',
             ylabel='total time (ms)',
         )
 
@@ -73,7 +70,7 @@ class MeasureDataFrames:
             kind='line',
             x='i',
             y='mean',
-            label='async-local',
+            label='async-single-vm',
             ax=axes
         )
 
@@ -92,8 +89,6 @@ class MeasureDataFrames:
 
 
 if __name__ == "__main__":
-    df = MeasureDataFrames()
-
-    df.plot_sync()
-
-    plt.show()
+    measures = MeasureDataFrames()
+    measures.plot()
+    measures.show()

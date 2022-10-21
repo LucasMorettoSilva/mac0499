@@ -22,7 +22,7 @@ class FileConverter:
         print("printing final file...")
 
         with open('final-measures.csv', 'w') as file:
-            file.write('type,env,start_time,end_time,elapsed_time\n')
+            file.write('experiment-type,i,mean,std,ci\n')
             for f in self.files:
                 f.write_to_file(file)
 
@@ -40,9 +40,9 @@ class FileArgs:
         print(f"reading file: {filename}")
 
         with open(filename) as file:
-            lines = file.readlines()[2:]
+            lines = file.readlines()[1:]
             for line in lines:
-                self.lines.append(f"{self.type},{self.env},{line}")
+                self.lines.append(f"{self.type}-{self.env},{line}")
 
     def write_to_file(self, file):
         for line in self.lines:
@@ -56,9 +56,9 @@ class FileArgs:
 
     @staticmethod
     def __get_experiment_env(filename):
-        if 'docker' in filename.lower():
-            return 'docker'
-        return 'local'
+        if 'diff' in filename.lower():
+            return 'diff-vm'
+        return 'single-vm'
 
 
 def main():
