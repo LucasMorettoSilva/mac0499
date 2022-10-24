@@ -1,0 +1,88 @@
+charm pingr async
+
+    caracterização dos serviços
+    
+        tamanho do módulos
+            sync-ms-chat: 1
+            sync-ms-connection: 1
+
+        Compartilhamento de bases de dados entre modulos:
+            sync-ms-chat:
+                data source: db-chat
+                    tabelas: 4
+                data sources exclusivos: 1
+                data sources compartilhados entre serviços: 0
+                data sources com operações apenas de escrita: 0
+                data sources com operações apenas de leitura: 0
+                data sources com operações escrita e leitura: 1
+
+            sync-ms-connection:
+                data source: db-connection
+                    tabelas: 2
+                data sources exclusivos: 1
+                data sources compartilhados entre serviços: 0
+                data sources com operações apenas de escrita: 0
+                data sources com operações apenas de leitura: 0
+                data sources com operações escrita e leitura: 1
+
+        Acoplamento síncrono entre os serviços:
+            * grau de dependência: indica o número de serviços que o dado serviço é dependente
+            * grau de importância: indica o número de serviços clientes que invocam as operações do serviço
+
+            sync-ms-chat:
+                grau de importância: 0
+                grau de dependência: 0 
+
+            sync-ms-connection:
+                grau de importância: 0
+                grau de dependência: 0 
+
+        Acoplamento assíncrono entre os serviços:
+            * grau de dependência: indica o número de diferentes tipos de mensagens consumidas pelo serviço
+            * grau de importância: indica o número de diferentes tipos de mensagens publicadas pelo serviço
+
+            sync-ms-chat:
+                grau de importância: 0
+                grau de dependência: 1
+
+            sync-ms-connection:
+                grau de importância: 1
+                grau de dependência: 0 
+
+    caracterização do sistema
+
+        tamanho do sistema
+            2 módulos
+            2 serviços
+            1 serviço por módulo
+
+        Compartilhamento de bases de dados entre modulos
+            2 data sources
+            6 tabelas
+            2 data sources exclusivos
+            0 data sources compartilhados
+
+        Acoplamento síncrono:
+            interações internas: 0
+            interações externas: 0
+            total de interações: 0
+
+        Acoplamento assíncrono:
+            interações internas: 1
+            interações externas: 0
+            total de interações: 1
+
+        Trade-offs em comparação com solução síncrona:
+            1 A adoção de interações assíncronas não alterou o tamanho do sistema, tão pouco o tamanho dos serviços/módulos.
+
+            2 A adoção de interações assíncronas não alterou a quantidade de data sources compartilhados entre módulos. 
+            Porém, o microsserviço async-ms-chat possui uma tabela a mais em seu BD para armazenar as amizades existentes.
+
+            3 O acoplamento síncrono foi eliminado do sistema. Isso significa que os serviços podem executar suas funções
+            sem tempo de espera ou bloqueio por parte de outro. Também siginifica que amboms os serviços podem executar
+            de forma resiliente independente do estado do outro (se um cair, o outro continua executando 100% de sua função).
+
+            4 O acoplamento assíncrono passou a existir no sistema, sendo que async-ms-chat depende das mensagens publicadas
+            por async-ms-connection. É importante ressaltar que essa dependência não ocorre diretamente entre os serviços,
+            mas sim da garantia de que as mensagens sejam publicadas e estejam disponíveis na fila/tópico para os serviços
+            interessados. Isso significa que existe depedência externa com o broker de mensagens (que deve ser bastante resiliente).
