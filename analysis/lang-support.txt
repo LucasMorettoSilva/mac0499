@@ -1,0 +1,31 @@
+Sobre o atributo heterogeneidade de tecnologias disponíveis para cada solução, eu fiz um levantamento
+de bibliotecas existentes que oferecem meios de se comunicar em HTTP ou AMQP para algumas linguagens
+de programação disponíveis. 
+
+Para as linguagens escolhidas no levantamento eu utilizei a pesquisa 
+"Top Programming Languages 2022" da IEEE Spectrum (https://spectrum.ieee.org/top-programming-languages-2022). Esse levantamento inclui algumas linguagens 
+como HTML, Verilog, VHDL, etc. que não representam realmente linguagens de programação ou não estariam
+ no escopo desse trabalho, mas as mantive na lista para estar de acordo com a pesquisa.
+
+Como estamos focando no escopo de desenvolvimento
+de microsserviços, também utilizei as pesquisas "DevEcosystem 2021" da Jetbrains (https://www.jetbrains.com/lp/devecosystem-2021/microservices/) e 
+"Primary programming languages among microservices developers worldwide in 2021" da Statista (https://www.statista.com/statistics/1273806/microservice-developers-programming-language/), para garantir 
+que o levantamento cobrisse as linguagens mais utilizadas durante o desenvolvimento desse tipo de arquitetura.
+As linguagens que parecerem no topo da lista, com background azul, são as presentes nas duas últimas pesquisas,
+as de mais vieram do levantamento da IEEE.
+
+Pode-se notar que dentre as linguagens mais utilizadas para o desenvolvimento de microsserviços, todas, com exceção de HTML,
+possuem alguma biblioteca que ofereça suporte para comunicação via AMQP ou HTTP. 
+
+Levando em consideração o amplo espectro de linguagens, temos que 10 linguagens não possuem 
+bibliotecas com suporte de comunicação via AMQP e 5 não possuem 
+bibliotecas com suporte de comunicação via HTTP. Dentre as 10 sem suporte a AMQP, 
+temos presente as 5 sem suporte a HTTP. As cinco restantes possuem suporte a HTTP.
+
+Assim, em questão de trade-offs:
+    - se considerarmos as linguagens mais utilizadas em microserviços, ambas as soluções, síncrona ou
+    assíncrona, estão equivalentes. Atuam de forma neutra no atributo "heterogeneidade de tecnologias disponíveis"
+
+    - se considerarmos o amplo espectro de linguagens mais utilizadas no mercado, ano atual, então a escolha
+    de uma solução assíncrona pode comprometer de forma negativa as tecnologias que podem ser empregadas na
+    arquitetura do sistema.

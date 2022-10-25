@@ -1,0 +1,21 @@
+Sobre o atributo de performance, foquei em analisar a operação de envio de mensagens
+entre usuários (imagem do diagrama de sequência em anexo). Essa operação é particularmente interessante para a comparação entre
+solução síncrona e assíncrona, visto que na primeira existe um acoplamento síncrono
+forte entre os serviços envolvidos, onde sync-ms-chat fica bloqueado esperando 
+resposta de sync-ms-connection.
+
+Para cada solução (sync e async), executei uma série de 30 experimentos, com 30 requisições cada, 
+para mensurar a latência da operação de envio de mensagens do sistema. Os experimentos foram executados
+tendo ambos os serviços rodando na mesma VM (single-vm) e em VMs distintas (diff-vm).
+
+Os dados abaixos foram os resultados obtidos:
+
+experiment-type  count      mean       std   ci95_hi   ci95_lo
+                                               
+async-diff-vm       30  0.020146  0.002221  0.020941  0.019352
+async-single-vm     30  0.019507  0.001677  0.020107  0.018907
+sync-diff-vm        30  0.023786  0.002217  0.024579  0.022992
+sync-single-vm      30  0.024358  0.002726  0.025334  0.023383
+
+Pode-se notar que a solução assíncrona é muito mais rápida que a solução síncrona. 
+Além de evitar acoplamento entre os serviços.

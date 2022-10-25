@@ -1,5 +1,8 @@
-import numpy as np
+import math
 
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
 
 class Measure:
 
@@ -33,7 +36,22 @@ def write_file(filename, measures):
             file.write(f"{m}\n")
 
 
-if __name__ == "__main__":
-    measures = read_file("./new-measures-sync.csv")
+def pa():
+    df = pd.read_csv("./final-measures.csv")
+    stats = df.groupby("experiment-type")["mean"].agg(["count", "mean", "std"])
 
-    write_file("new-measures-sync.csv", measures)
+    ci95_hi = []
+    ci95_lo = []
+
+    for i in stats.index:
+        c, m, s = stats.loc[i]
+        ci95_hi.append(m + 1.96 * s / math.sqrt(c))
+        ci95_lo.append(m - 1.96 * s / math.sqrt(c))
+
+    stats['ci95_hi'] = ci95_hi
+    stats['ci95_lo'] = ci95_lo
+    print(stats)
+
+
+if __name__ == "__main__":
+    pa()

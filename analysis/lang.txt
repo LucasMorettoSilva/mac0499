@@ -52,3 +52,4 @@ Scheme,0,,1,https://cons.io/reference/requests.html#request-api
 ABAP,0,,1,https://help.sap.com/docs/SAP_NETWEAVER_750/753088fc00704d0a80e7fbd6803c8adb/48c7c53bda5e31ebe10000000a42189b.html?version=7.5.8
 WebAssembly,0,,1,https://github.com/deislabs/wasi-experimental-http
 CoffeScript,1,https://github.com/dropbox/amqp-coffee,1,https://coffeescript-cookbook.github.io/chapters/networking/basic-http-client
+Unity3D,1,https://github.com/CymaticLabs/Unity3D.Amqp,1,https://github.com/satanas/unity-simple-http
