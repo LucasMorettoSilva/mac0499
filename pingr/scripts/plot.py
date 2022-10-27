@@ -5,12 +5,13 @@ import pandas as pd
 class MeasureDataFrames:
 
     def __init__(self):
-        self.df_sync_single_vm = pd.read_csv("./sync-measures-single-vm.csv")
-        self.df_async_single_vm = pd.read_csv("./async-measures-single-vm.csv")
-        self.df_sync_diff_vm = pd.read_csv("./sync-measures-diff-vm.csv")
-        self.df_async_diff_vm = pd.read_csv("./async-measures-diff-vm.csv")
-        self.df_merge = pd.read_csv("./final-measures.csv")
-        self.new_sync = pd.read_csv("./new-measures-sync.csv")
+        folder = "results-new"
+        self.df_sync_single_vm = pd.read_csv(f"./{folder}/sync-measures-single-vm.csv")
+        self.df_async_single_vm = pd.read_csv(f"./{folder}/async-measures-single-vm.csv")
+        self.df_sync_diff_vm = pd.read_csv(f"./{folder}/sync-measures-diff-vm.csv")
+        self.df_async_diff_vm = pd.read_csv(f"./{folder}/async-measures-diff-vm.csv")
+        self.df_merge = pd.read_csv(f"./{folder}/final-measures.csv")
+        self.new_sync = pd.read_csv(f"./{folder}/final-measures.csv")
 
     def plot(self):
         axes = plt.gca()

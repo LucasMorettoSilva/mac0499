@@ -5,9 +5,9 @@ import numpy as np
 
 default_output_file = "measures.csv"
 default_api_url = "http://localhost:9086/api/chats/messages"
-default_runs = 31
-default_exp = 30
-default_interval = 2
+default_runs = 100
+default_exp = 100
+default_interval = 0
 
 
 class PerfStats:
