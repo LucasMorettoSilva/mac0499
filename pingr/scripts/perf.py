@@ -59,7 +59,7 @@ def call_api(api_url):
     return stopwatch.elapsed_time
 
 
-def run_experiments(api_url, runs, exp):
+def run_experiments(api_url, runs, exp, simple):
     stats = []
 
     for e in range(exp):
@@ -68,19 +68,25 @@ def run_experiments(api_url, runs, exp):
             print(f"running experiment {e} [run {i} of {runs}]...")
             measures.append(call_api(api_url))
             time.sleep(default_interval)
+        if simple:
+            return measures[1:]
+
         stats.append(PerfStats(e, measures[1:]))
 
     return stats
 
 
-def save_stats(filename, measures):
+def save_stats(filename, measures, simple):
     print(f"writing stats in file: {filename}")
 
     with open(filename, 'w') as file:
         file.write("i,mean,std,ci\n")
 
-        for m in measures:
-            file.write(f"{m}\n")
+        for index, m in enumerate(measures):
+            if simple:
+                file.write(f"{index},{m}\n")
+            else:
+                file.write(f"{m}\n")
 
     print("finished writing file")
 
@@ -124,14 +130,21 @@ def main():
         default=default_output_file
     )
 
+    parser.add_argument(
+        '--simple',
+        help='simple experiment',
+        default=False
+    )
+
     url_arg = parser.parse_args().url
     output_file = parser.parse_args().output
     runs = parser.parse_args().runs
     exp = parser.parse_args().exp
+    simple = parser.parse_args().simple
 
     try:
-        measures = run_experiments(url_arg, runs, exp)
-        save_stats(output_file, measures)
+        measures = run_experiments(url_arg, runs, exp, simple)
+        save_stats(output_file, measures, simple)
 
         print("Process completed")
     except Exception as e:
