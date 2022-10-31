@@ -5,7 +5,7 @@ import pandas as pd
 class MeasureDataFrames:
 
     def __init__(self):
-        folder = "results-new"
+        folder = "results-2"
         self.df_sync_single_vm = pd.read_csv(f"./{folder}/sync-measures-single-vm.csv")
         self.df_async_single_vm = pd.read_csv(f"./{folder}/async-measures-single-vm.csv")
         self.df_sync_diff_vm = pd.read_csv(f"./{folder}/sync-measures-diff-vm.csv")
@@ -28,7 +28,7 @@ class MeasureDataFrames:
     def box_sync(self):
         self.df_merge.boxplot(
             by='experiment-type',
-            column=['mean'],
+            column=['elapsed_time'],
             grid=False
         )
 
@@ -91,5 +91,5 @@ class MeasureDataFrames:
 
 if __name__ == "__main__":
     measures = MeasureDataFrames()
-    measures.plot()
+    measures.box()
     measures.show()

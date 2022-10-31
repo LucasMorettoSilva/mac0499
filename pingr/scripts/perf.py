@@ -5,8 +5,8 @@ import numpy as np
 
 default_output_file = "measures.csv"
 default_api_url = "http://localhost:9086/api/chats/messages"
-default_runs = 100
-default_exp = 100
+default_runs = 101
+default_exp = 101
 default_interval = 0
 
 
@@ -140,7 +140,7 @@ def main():
     output_file = parser.parse_args().output
     runs = parser.parse_args().runs
     exp = parser.parse_args().exp
-    simple = parser.parse_args().simple
+    simple = bool(parser.parse_args().simple)
 
     try:
         measures = run_experiments(url_arg, runs, exp, simple)

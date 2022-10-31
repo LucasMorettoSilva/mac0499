@@ -37,7 +37,7 @@ def write_file(filename, measures):
 
 
 def pa():
-    df = pd.read_csv("./results-new/final-measures.csv")
+    df = pd.read_csv("./results-2/final-measures.csv")
     stats = df.groupby("experiment-type")["mean"].agg(["count", "mean", "std"])
 
     ci95_hi = []
@@ -48,8 +48,8 @@ def pa():
         ci95_hi.append(m + 1.96 * s / math.sqrt(c))
         ci95_lo.append(m - 1.96 * s / math.sqrt(c))
 
-    stats['ci95_hi'] = ci95_hi
     stats['ci95_lo'] = ci95_lo
+    stats['ci95_hi'] = ci95_hi
     print(stats)
 
 

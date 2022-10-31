@@ -21,7 +21,7 @@ class FileConverter:
     def write_file(self):
         print("printing final file...")
 
-        with open('final-measures.csv', 'w') as file:
+        with open('results-2/final-measures.csv', 'w') as file:
             file.write('experiment-type,i,mean,std,ci\n')
             for f in self.files:
                 f.write_to_file(file)
