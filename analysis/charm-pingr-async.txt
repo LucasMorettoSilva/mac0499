@@ -3,8 +3,17 @@ charm pingr async
     caracterização dos serviços
     
         tamanho do módulos
-            sync-ms-chat: 1
-            sync-ms-connection: 1
+            sync-ms-chat: 
+                1 serviço por módulo
+                3 operações
+                    criar novas conversas (chats)
+                    enviar novas mensagens em uma conversa
+                    ler as mensagens de uma conversa
+            sync-ms-connection: 
+                1 serviço por módulo
+                2 operações
+                    criar novas conexões/amizades entre usuário
+                    verificar a existência de uma amizade entre dois usuários
 
         Compartilhamento de bases de dados entre modulos:
             sync-ms-chat:
