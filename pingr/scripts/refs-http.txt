@@ -1,392 +1,392 @@
 
-            @online{ref76,
-             title       = {Apache HttpComponents – HttpClient Overview},
-             urldate     = {2022-10-31},
-             url         = {https://hc.apache.org/httpcomponents-client-4.5.x/index.html},
-            }
-        
-
-
-            @online{ref77,
-             title       = {GitHub - axios/axios: Promise based HTTP client for the browser and node.js},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/axios/axios},
-            }
-        
-
-
-            @online{ref78,
-             title       = {Requests: HTTP for Humans — Requests 2.28.1 documentation},
-             urldate     = {2022-10-31},
-             url         = {https://requests.readthedocs.io/},
-            }
-        
-
-
-            @online{ref79,
-             title       = {SQL httprequest},
-             urldate     = {2022-10-31},
-             url         = {https://sqlhttp.net/documentation/http/httprequest/},
-            }
-        
-
-
-            @online{ref80,
-             title       = {GitHub - yiisoft/yii2-httpclient: Yii 2 HTTP client},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/yiisoft/yii2-httpclient},
-            }
-        
-
-
-            @online{ref81,
-             title       = {Axios},
-             urldate     = {2022-10-31},
-             url         = {https://axios-http.com/},
-            }
-        
-
-
-            @online{ref82,
-             title       = {GitHub - restsharp/RestSharp: Simple REST and HTTP API Client for .NET},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/restsharp/RestSharp},
-            }
-        
-
-
-            @online{ref83,
-             title       = {GitHub - go-resty/resty: Simple HTTP and REST client library for Go},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/go-resty/resty},
-            }
-        
-
-
-            @online{ref84,
-             title       = {Apache HttpComponents – HttpClient Overview},
-             urldate     = {2022-10-31},
-             url         = {https://hc.apache.org/httpcomponents-client-4.5.x/index.html},
-            }
-        
-
-
-            @online{ref85,
-             title       = {curl},
-             urldate     = {2022-10-31},
-             url         = {https://curl.se/},
-            }
-        
-
-
-            @online{ref86,
-             title       = {LibHTTP – Open Source HTTP Library in C – Cross platform HTTP and HTTPS library},
-             urldate     = {2022-10-31},
-             url         = {https://www.libhttp.org/},
-            }
-        
-
-
-            @online{ref87,
-             title       = {LibHTTP – Open Source HTTP Library in C – Cross platform HTTP and HTTPS library},
-             urldate     = {2022-10-31},
-             url         = {https://www.libhttp.org/},
-            }
-        
-
-
-            @online{ref88,
-             title       = {CRAN - Package crul},
-             urldate     = {2022-10-31},
-             url         = {https://cran.r-project.org/web/packages/crul/},
-            }
-        
+@online{ref76,
+ title       = {Apache HttpComponents – HttpClient Overview},
+ urldate     = {2022-10-31},
+ url         = {https://hc.apache.org/httpcomponents-client-4.5.x/index.html},
+}
 
 
-            @online{ref89,
-             title       = {GitHub - lostisland/faraday: Simple, but flexible HTTP client library, with support for multiple backends.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/lostisland/faraday},
-            }
-        
 
+@online{ref77,
+ title       = {GitHub - axios/axios: Promise based HTTP client for the browser and node.js},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/axios/axios},
+}
 
-            @online{ref90,
-             title       = {sttp: the Scala HTTP client you always wanted! — sttp 3 documentation},
-             urldate     = {2022-10-31},
-             url         = {https://sttp.softwaremill.com/en/latest/},
-            }
-        
 
 
-            @online{ref91,
-             title       = {Use HTTP with MATLAB - MATLAB & Simulink},
-             urldate     = {2022-10-31},
-             url         = {https://www.mathworks.com/help/matlab/http-interface.html},
-            }
-        
+@online{ref78,
+ title       = {Requests: HTTP for Humans — Requests 2.28.1 documentation},
+ urldate     = {2022-10-31},
+ url         = {https://requests.readthedocs.io/},
+}
 
 
-            @online{ref92,
-             title       = {SAS Help Center},
-             urldate     = {2022-10-31},
-             url         = {https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/n0bdg5vmrpyi7jn1pbgbje2atoov.htm},
-            }
-        
 
+@online{ref79,
+ title       = {SQL httprequest},
+ urldate     = {2022-10-31},
+ url         = {https://sqlhttp.net/documentation/http/httprequest/},
+}
 
-            @online{ref93,
-             title       = {GitHub - seanmonstar/reqwest: An easy and powerful Rust HTTP Client},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/seanmonstar/reqwest},
-            }
-        
 
 
-            @online{ref94,
-             title       = {HTTP::Tiny - A small, simple, correct HTTP/1.1 client - Perldoc Browser},
-             urldate     = {2022-10-31},
-             url         = {https://perldoc.perl.org/HTTP::Tiny},
-            }
-        
+@online{ref80,
+ title       = {GitHub - yiisoft/yii2-httpclient: Yii 2 HTTP client},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/yiisoft/yii2-httpclient},
+}
 
 
-            @online{ref95,
-             title       = {Making HTTP and HTTPS Requests},
-             urldate     = {2022-10-31},
-             url         = {https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WorkingWithHTTPAndHTTPSRequests/WorkingWithHTTPAndHTTPSRequests.html},
-            }
-        
 
+@online{ref81,
+ title       = {Axios},
+ urldate     = {2022-10-31},
+ url         = {https://axios-http.com/},
+}
 
-            @online{ref96,
-             title       = {http | Dart Package},
-             urldate     = {2022-10-31},
-             url         = {https://pub.dev/packages/http},
-            }
-        
 
 
-            @online{ref97,
-             title       = {HTTPClient – Swift Package Index},
-             urldate     = {2022-10-31},
-             url         = {https://swiftpackageindex.com/uhooi/swift-http-client},
-            }
-        
+@online{ref82,
+ title       = {GitHub - restsharp/RestSharp: Simple REST and HTTP API Client for .NET},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/restsharp/RestSharp},
+}
 
 
-            @online{ref98,
-             title       = {GitHub - JuliaWeb/HTTP.jl: HTTP for Julia},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/JuliaWeb/HTTP.jl},
-            }
-        
 
+@online{ref83,
+ title       = {GitHub - go-resty/resty: Simple HTTP and REST client library for Go},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/go-resty/resty},
+}
 
-            @online{ref99,
-             title       = {libcurl.vb download | SourceForge.net},
-             urldate     = {2022-10-31},
-             url         = {https://sourceforge.net/projects/libcurl-vb/},
-            }
-        
 
 
-            @online{ref100,
-             title       = {GitHub - jgritman/httpbuilder},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/jgritman/httpbuilder},
-            }
-        
+@online{ref84,
+ title       = {Apache HttpComponents – HttpClient Overview},
+ urldate     = {2022-10-31},
+ url         = {https://hc.apache.org/httpcomponents-client-4.5.x/index.html},
+}
 
 
-            @online{ref101,
-             title       = {GitHub - lusis/lua-httpclient: A unified http/s client library for lua},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/lusis/lua-httpclient},
-            }
-        
 
+@online{ref85,
+ title       = {curl},
+ urldate     = {2022-10-31},
+ url         = {https://curl.se/},
+}
 
-            @online{ref102,
-             title       = {http-client: An HTTP client engine},
-             urldate     = {2022-10-31},
-             url         = {https://hackage.haskell.org/package/http-client},
-            }
-        
 
 
-            @online{ref103,
-             title       = {How to make http requests from COBOL - Stack Overflow},
-             urldate     = {2022-10-31},
-             url         = {https://stackoverflow.com/questions/26367026/how-to-make-http-requests-from-cobol},
-            }
-        
+@online{ref86,
+ title       = {LibHTTP – Open Source HTTP Library in C – Cross platform HTTP and HTTPS library},
+ urldate     = {2022-10-31},
+ url         = {https://www.libhttp.org/},
+}
 
 
-            @online{ref104,
-             title       = {GitHub - elixir-mint/mint: Functional HTTP client for Elixir with support for HTTP/1 and HTTP/2 🌱},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/elixir-mint/mint},
-            }
-        
 
+@online{ref87,
+ title       = {LibHTTP – Open Source HTTP Library in C – Cross platform HTTP and HTTPS library},
+ urldate     = {2022-10-31},
+ url         = {https://www.libhttp.org/},
+}
 
-            @online{ref105,
-             title       = {GitHub - fsprojects/FsHttp: A lightweight F# HTTP library by @ronaldschlenker},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/fsprojects/FsHttp},
-            }
-        
 
 
-            @online{ref106,
-             title       = {GitHub - fukamachi/dexador: A fast HTTP client for Common Lisp},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/fukamachi/dexador},
-            }
-        
+@online{ref88,
+ title       = {CRAN - Package crul},
+ urldate     = {2022-10-31},
+ url         = {https://cran.r-project.org/web/packages/crul/},
+}
 
 
-            @online{ref107,
-             title       = {Using an HTTP Client},
-             urldate     = {2022-10-31},
-             url         = {https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_an_HTTP_Client},
-            }
-        
 
+@online{ref89,
+ title       = {GitHub - lostisland/faraday: Simple, but flexible HTTP client library, with support for multiple backends.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/lostisland/faraday},
+}
 
-            @online{ref108,
-             title       = {GitHub - dakrone/clj-http: An idiomatic clojure http client wrapping the apache client. Officially supported version.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/dakrone/clj-http},
-            }
-        
 
 
-            @online{ref109,
-             title       = {section('packages/http.html')},
-             urldate     = {2022-10-31},
-             url         = {https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/http.html%27)},
-            }
-        
+@online{ref90,
+ title       = {sttp: the Scala HTTP client you always wanted! — sttp 3 documentation},
+ urldate     = {2022-10-31},
+ url         = {https://sttp.softwaremill.com/en/latest/},
+}
 
 
-            @online{ref110,
-             title       = {GitHub - mirage/ocaml-cohttp: An OCaml library for HTTP clients and servers using Lwt or Async},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/mirage/ocaml-cohttp},
-            }
-        
 
+@online{ref91,
+ title       = {Use HTTP with MATLAB - MATLAB & Simulink},
+ urldate     = {2022-10-31},
+ url         = {https://www.mathworks.com/help/matlab/http-interface.html},
+}
 
-            @online{ref111,
-             title       = {Erlang -- HTTP Client},
-             urldate     = {2022-10-31},
-             url         = {https://www.erlang.org/doc/apps/inets/http_client.html},
-            }
-        
 
 
-            @online{ref112,
-             title       = {jruby-httpclient | RubyGems.org | your community gem host},
-             urldate     = {2022-10-31},
-             url         = {https://rubygems.org/gems/jruby-httpclient/versions/1.1.1-java},
-            }
-        
-
-
-            @online{ref113,
-             title       = {HTTP::Client - Crystal 1.6.1},
-             urldate     = {2022-10-31},
-             url         = {https://crystal-lang.org/api/1.6.1/HTTP/Client.html},
-            }
-        
-
-
-            @online{ref114,
-             title       = {http 2.0.0},
-             urldate     = {2022-10-31},
-             url         = {https://package.elm-lang.org/packages/elm/http/latest/},
-            }
-        
-
-
-            @online{ref115,
-             title       = {GitHub - raku-community-modules/HTTP-Easy: Make HTTP servers (with PSGI support) easily with Raku},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/raku-community-modules/HTTP-Easy},
-            }
-        
-
-
-            @online{ref116,
-             title       = {HttpClient - Arduino Reference},
-             urldate     = {2022-10-31},
-             url         = {https://www.arduino.cc/reference/en/libraries/httpclient/},
-            }
-        
-
-
-            @online{ref117,
-             title       = {Solved: Labview POST, PUT HTTP method - NI Community},
-             urldate     = {2022-10-31},
-             url         = {https://forums.ni.com/t5/LabVIEW-Web-Development/Labview-POST-PUT-HTTP-method/td-p/3663058},
-            }
-        
-
-
-            @online{ref118,
-             title       = {Struct HTTP - D Programming Language},
-             urldate     = {2022-10-31},
-             url         = {https://dlang.org/library/std/net/curl/http.html},
-            }
-        
-
-
-            @online{ref119,
-             title       = {HTTP - Ada Utility Library},
-             urldate     = {2022-10-31},
-             url         = {https://ada-util.readthedocs.io/en/latest/Util_Http/},
-            }
-        
-
-
-            @online{ref120,
-             title       = {HTTP requests | Gerbil Scheme},
-             urldate     = {2022-10-31},
-             url         = {https://cons.io/reference/requests.html#request-api},
-            }
-        
-
-
-            @online{ref121,
-             title       = {SAP Help Portal},
-             urldate     = {2022-10-31},
-             url         = {https://help.sap.com/docs/SAP_NETWEAVER_750/753088fc00704d0a80e7fbd6803c8adb/48c7c53bda5e31ebe10000000a42189b.html?version=7.5.8},
-            }
-        
-
-
-            @online{ref122,
-             title       = {GitHub - deislabs/wasi-experimental-http: Experimental outbound HTTP support for WebAssembly and WASI},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/deislabs/wasi-experimental-http},
-            }
-        
-
-
-            @online{ref123,
-             title       = {CoffeeScript Cookbook » Basic HTTP Client},
-             urldate     = {2022-10-31},
-             url         = {https://coffeescript-cookbook.github.io/chapters/networking/basic-http-client},
-            }
-        
-
-
-            @online{ref124,
-             title       = {GitHub - satanas/unity-simple-http: A dead simple HTTP client for Unity3D},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/satanas/unity-simple-http},
-            }
-        
+@online{ref92,
+ title       = {SAS Help Center},
+ urldate     = {2022-10-31},
+ url         = {https://documentation.sas.com/doc/en/pgmsascdc/9.4_3.5/proc/n0bdg5vmrpyi7jn1pbgbje2atoov.htm},
+}
+
+
+
+@online{ref93,
+ title       = {GitHub - seanmonstar/reqwest: An easy and powerful Rust HTTP Client},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/seanmonstar/reqwest},
+}
+
+
+
+@online{ref94,
+ title       = {HTTP::Tiny - A small, simple, correct HTTP/1.1 client - Perldoc Browser},
+ urldate     = {2022-10-31},
+ url         = {https://perldoc.perl.org/HTTP::Tiny},
+}
+
+
+
+@online{ref95,
+ title       = {Making HTTP and HTTPS Requests},
+ urldate     = {2022-10-31},
+ url         = {https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/WorkingWithHTTPAndHTTPSRequests/WorkingWithHTTPAndHTTPSRequests.html},
+}
+
+
+
+@online{ref96,
+ title       = {http | Dart Package},
+ urldate     = {2022-10-31},
+ url         = {https://pub.dev/packages/http},
+}
+
+
+
+@online{ref97,
+ title       = {HTTPClient – Swift Package Index},
+ urldate     = {2022-10-31},
+ url         = {https://swiftpackageindex.com/uhooi/swift-http-client},
+}
+
+
+
+@online{ref98,
+ title       = {GitHub - JuliaWeb/HTTP.jl: HTTP for Julia},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/JuliaWeb/HTTP.jl},
+}
+
+
+
+@online{ref99,
+ title       = {libcurl.vb download | SourceForge.net},
+ urldate     = {2022-10-31},
+ url         = {https://sourceforge.net/projects/libcurl-vb/},
+}
+
+
+
+@online{ref100,
+ title       = {GitHub - jgritman/httpbuilder},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/jgritman/httpbuilder},
+}
+
+
+
+@online{ref101,
+ title       = {GitHub - lusis/lua-httpclient: A unified http/s client library for lua},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/lusis/lua-httpclient},
+}
+
+
+
+@online{ref102,
+ title       = {http-client: An HTTP client engine},
+ urldate     = {2022-10-31},
+ url         = {https://hackage.haskell.org/package/http-client},
+}
+
+
+
+@online{ref103,
+ title       = {How to make http requests from COBOL - Stack Overflow},
+ urldate     = {2022-10-31},
+ url         = {https://stackoverflow.com/questions/26367026/how-to-make-http-requests-from-cobol},
+}
+
+
+
+@online{ref104,
+ title       = {GitHub - elixir-mint/mint: Functional HTTP client for Elixir with support for HTTP/1 and HTTP/2 🌱},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/elixir-mint/mint},
+}
+
+
+
+@online{ref105,
+ title       = {GitHub - fsprojects/FsHttp: A lightweight F# HTTP library by @ronaldschlenker},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/fsprojects/FsHttp},
+}
+
+
+
+@online{ref106,
+ title       = {GitHub - fukamachi/dexador: A fast HTTP client for Common Lisp},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/fukamachi/dexador},
+}
+
+
+
+@online{ref107,
+ title       = {Using an HTTP Client},
+ urldate     = {2022-10-31},
+ url         = {https://docwiki.embarcadero.com/RADStudio/Alexandria/en/Using_an_HTTP_Client},
+}
+
+
+
+@online{ref108,
+ title       = {GitHub - dakrone/clj-http: An idiomatic clojure http client wrapping the apache client. Officially supported version.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/dakrone/clj-http},
+}
+
+
+
+@online{ref109,
+ title       = {section('packages/http.html')},
+ urldate     = {2022-10-31},
+ url         = {https://www.swi-prolog.org/pldoc/doc_for?object=section(%27packages/http.html%27)},
+}
+
+
+
+@online{ref110,
+ title       = {GitHub - mirage/ocaml-cohttp: An OCaml library for HTTP clients and servers using Lwt or Async},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/mirage/ocaml-cohttp},
+}
+
+
+
+@online{ref111,
+ title       = {Erlang -- HTTP Client},
+ urldate     = {2022-10-31},
+ url         = {https://www.erlang.org/doc/apps/inets/http_client.html},
+}
+
+
+
+@online{ref112,
+ title       = {jruby-httpclient | RubyGems.org | your community gem host},
+ urldate     = {2022-10-31},
+ url         = {https://rubygems.org/gems/jruby-httpclient/versions/1.1.1-java},
+}
+
+
+
+@online{ref113,
+ title       = {HTTP::Client - Crystal 1.6.1},
+ urldate     = {2022-10-31},
+ url         = {https://crystal-lang.org/api/1.6.1/HTTP/Client.html},
+}
+
+
+
+@online{ref114,
+ title       = {http 2.0.0},
+ urldate     = {2022-10-31},
+ url         = {https://package.elm-lang.org/packages/elm/http/latest/},
+}
+
+
+
+@online{ref115,
+ title       = {GitHub - raku-community-modules/HTTP-Easy: Make HTTP servers (with PSGI support) easily with Raku},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/raku-community-modules/HTTP-Easy},
+}
+
+
+
+@online{ref116,
+ title       = {HttpClient - Arduino Reference},
+ urldate     = {2022-10-31},
+ url         = {https://www.arduino.cc/reference/en/libraries/httpclient/},
+}
+
+
+
+@online{ref117,
+ title       = {Solved: Labview POST, PUT HTTP method - NI Community},
+ urldate     = {2022-10-31},
+ url         = {https://forums.ni.com/t5/LabVIEW-Web-Development/Labview-POST-PUT-HTTP-method/td-p/3663058},
+}
+
+
+
+@online{ref118,
+ title       = {Struct HTTP - D Programming Language},
+ urldate     = {2022-10-31},
+ url         = {https://dlang.org/library/std/net/curl/http.html},
+}
+
+
+
+@online{ref119,
+ title       = {HTTP - Ada Utility Library},
+ urldate     = {2022-10-31},
+ url         = {https://ada-util.readthedocs.io/en/latest/Util_Http/},
+}
+
+
+
+@online{ref120,
+ title       = {HTTP requests | Gerbil Scheme},
+ urldate     = {2022-10-31},
+ url         = {https://cons.io/reference/requests.html#request-api},
+}
+
+
+
+@online{ref121,
+ title       = {SAP Help Portal},
+ urldate     = {2022-10-31},
+ url         = {https://help.sap.com/docs/SAP_NETWEAVER_750/753088fc00704d0a80e7fbd6803c8adb/48c7c53bda5e31ebe10000000a42189b.html?version=7.5.8},
+}
+
+
+
+@online{ref122,
+ title       = {GitHub - deislabs/wasi-experimental-http: Experimental outbound HTTP support for WebAssembly and WASI},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/deislabs/wasi-experimental-http},
+}
+
+
+
+@online{ref123,
+ title       = {CoffeeScript Cookbook » Basic HTTP Client},
+ urldate     = {2022-10-31},
+ url         = {https://coffeescript-cookbook.github.io/chapters/networking/basic-http-client},
+}
+
+
+
+@online{ref124,
+ title       = {GitHub - satanas/unity-simple-http: A dead simple HTTP client for Unity3D},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/satanas/unity-simple-http},
+}
+
 

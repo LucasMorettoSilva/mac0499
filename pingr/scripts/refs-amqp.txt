@@ -1,352 +1,352 @@
 
-            @online{ref32,
-             title       = { RabbitMQ Java Client Library - RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://www.rabbitmq.com/java-client.html},
-            }
-        
-
-
-            @online{ref33,
-             title       = {GitHub - amqp-node/amqplib: AMQP 0-9-1 library and client for Node.JS},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/amqp-node/amqplib},
-            }
-        
-
-
-            @online{ref34,
-             title       = {pika · PyPI},
-             urldate     = {2022-10-31},
-             url         = {http://pypi.python.org/pypi/pika},
-            }
-        
-
-
-            @online{ref35,
-             title       = {GitHub - pmq/rabbitmq-oracle-stored-procedures: RabbitMQ stored procedures for Oracle DB},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/pmq/rabbitmq-oracle-stored-procedures},
-            }
-        
-
-
-            @online{ref36,
-             title       = {GitHub - php-amqplib/php-amqplib: The most widely used PHP client for RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/php-amqplib/php-amqplib},
-            }
-        
-
-
-            @online{ref37,
-             title       = {GitHub - cloudamqp/amqp-client.js: AMQP 0-9-1 TypeScript client both for Node.js and browsers (using WebSocket)},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/cloudamqp/amqp-client.js},
-            }
-        
-
-
-            @online{ref38,
-             title       = { .NET/C# RabbitMQ Client Library - RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://www.rabbitmq.com/dotnet.html},
-            }
-        
-
-
-            @online{ref39,
-             title       = {GitHub - rabbitmq/amqp091-go: An AMQP 0-9-1 Go client maintained by the RabbitMQ team.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/rabbitmq/amqp091-go},
-            }
-        
-
-
-            @online{ref40,
-             title       = { RabbitMQ Java Client Library - RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://www.rabbitmq.com/java-client.html},
-            }
-        
-
-
-            @online{ref41,
-             title       = {GitHub - cloudamqp/amqpcat: CLI tool for publishing to and consuming from AMQP servers},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/cloudamqp/amqpcat},
-            }
-        
-
-
-            @online{ref42,
-             title       = {GitHub - akalend/amqpcpp: rabbitcpp is a C++ library for Message Queue Server RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/akalend/amqpcpp},
-            }
-        
-
-
-            @online{ref43,
-             title       = {GitHub - alanxz/rabbitmq-c: RabbitMQ C client},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/alanxz/rabbitmq-c},
-            }
-        
-
-
-            @online{ref44,
-             title       = {messageQueue-package: Allow R to communicate with message queues},
-             urldate     = {2022-10-31},
-             url         = {https://rdrr.io/rforge/messageQueue/man/messageQueue-package.html},
-            }
-        
+@online{ref32,
+ title       = {RabbitMQ Java Client Library - RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://www.rabbitmq.com/java-client.html},
+}
 
 
-            @online{ref45,
-             title       = {Bunny, a dead easy to use RabbitMQ Ruby client},
-             urldate     = {2022-10-31},
-             url         = {http://rubybunny.info/},
-            }
-        
 
+@online{ref33,
+ title       = {GitHub - amqp-node/amqplib: AMQP 0-9-1 library and client for Node.JS},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/amqp-node/amqplib},
+}
 
-            @online{ref46,
-             title       = {GitHub - sstone/amqp-client: Simple fault-tolerant AMQP client written in Scala},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/sstone/amqp-client},
-            }
-        
 
 
-            @online{ref47,
-             title       = {GitHub - mathworks-ref-arch/matlab-rabbitmq: MATLAB Interface for RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/mathworks-ref-arch/matlab-rabbitmq},
-            }
-        
+@online{ref34,
+ title       = {pika · PyPI},
+ urldate     = {2022-10-31},
+ url         = {http://pypi.python.org/pypi/pika},
+}
 
 
-            @online{ref48,
-             title       = {SAS Help Center},
-             urldate     = {2022-10-31},
-             url         = {https://documentation.sas.com/doc/en/espcdc/6.1/espca/p1k84sxazgi57dn19ij9yz9tu6u6.htm},
-            }
-        
 
+@online{ref35,
+ title       = {GitHub - pmq/rabbitmq-oracle-stored-procedures: RabbitMQ stored procedures for Oracle DB},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/pmq/rabbitmq-oracle-stored-procedures},
+}
 
-            @online{ref49,
-             title       = {GitHub - amqp-rs/lapin: AMQP client library in Rust, with a clean, futures based API},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/sozu-proxy/lapin},
-            }
-        
 
 
-            @online{ref50,
-             title       = {GitHub - cooldaemon/RabbitFoot: An asynchronous and multi channel Perl AMQP client.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/cooldaemon/RabbitFoot},
-            }
-        
+@online{ref36,
+ title       = {GitHub - php-amqplib/php-amqplib: The most widely used PHP client for RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/php-amqplib/php-amqplib},
+}
 
 
-            @online{ref51,
-             title       = {GitHub - rabbitmq/rabbitmq-objc-client: RabbitMQ client for Objective-C and Swift},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/rabbitmq/rabbitmq-objc-client/},
-            }
-        
 
+@online{ref37,
+ title       = {GitHub - cloudamqp/amqp-client.js: AMQP 0-9-1 TypeScript client both for Node.js and browsers (using WebSocket)},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/cloudamqp/amqp-client.js},
+}
 
-            @online{ref52,
-             title       = {dart_amqp | Dart Package},
-             urldate     = {2022-10-31},
-             url         = {https://pub.dev/packages/dart_amqp},
-            }
-        
 
 
-            @online{ref53,
-             title       = {GitHub - rabbitmq/rabbitmq-objc-client: RabbitMQ client for Objective-C and Swift},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/rabbitmq/rabbitmq-objc-client/},
-            }
-        
+@online{ref38,
+ title       = { .NET/C# RabbitMQ Client Library - RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://www.rabbitmq.com/dotnet.html},
+}
 
 
-            @online{ref54,
-             title       = {GitHub - JuliaComputing/AMQPClient.jl: A Julia AMQP (Advanced Message Queuing Protocol) / RabbitMQ Client.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/JuliaComputing/AMQPClient.jl},
-            }
-        
 
+@online{ref39,
+ title       = {GitHub - rabbitmq/amqp091-go: An AMQP 0-9-1 Go client maintained by the RabbitMQ team.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/rabbitmq/amqp091-go},
+}
 
-            @online{ref55,
-             title       = { .NET/C# RabbitMQ Client Library - RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://www.rabbitmq.com/dotnet.html},
-            }
-        
 
 
-            @online{ref56,
-             title       = {RabbitMQ Native Grails Plugin Documentation},
-             urldate     = {2022-10-31},
-             url         = {https://plugins.grails.org/plugin/budjb/rabbitmq-native},
-            }
-        
+@online{ref40,
+ title       = { RabbitMQ Java Client Library - RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://www.rabbitmq.com/java-client.html},
+}
 
 
-            @online{ref57,
-             title       = {GitHub - wingify/lua-resty-rabbitmqstomp: Opinionated Lua RabbitMQ client library},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/wingify/lua-resty-rabbitmqstomp},
-            }
-        
 
+@online{ref41,
+ title       = {GitHub - cloudamqp/amqpcat: CLI tool for publishing to and consuming from AMQP servers},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/cloudamqp/amqpcat},
+}
 
-            @online{ref58,
-             title       = {GitHub - hreinhardt/amqp: Haskell AMQP client library},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/hreinhardt/amqp},
-            }
-        
 
 
-            @online{ref59,
-             title       = {Assorted Ramblings: Using RabbitMQ from COBOL},
-             urldate     = {2022-10-31},
-             url         = {https://assortedrambles.blogspot.com/2013/04/using-rabbitmq-from-cobol_9584.html},
-            }
-        
+@online{ref42,
+ title       = {GitHub - akalend/amqpcpp: rabbitcpp is a C++ library for Message Queue Server RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/akalend/amqpcpp},
+}
 
 
-            @online{ref60,
-             title       = {GitHub - pma/amqp: Idiomatic Elixir client for RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/pma/amqp},
-            }
-        
 
+@online{ref43,
+ title       = {GitHub - alanxz/rabbitmq-c: RabbitMQ C client},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/alanxz/rabbitmq-c},
+}
 
-            @online{ref61,
-             title       = {Utilizing RabbitMQ with F# | codesuji},
-             urldate     = {2022-10-31},
-             url         = {https://www.codesuji.com/2019/10/24/F-RabbitMQ/},
-            }
-        
 
 
-            @online{ref62,
-             title       = {GitHub - lokedhs/cl-rabbit: RabbitMQ interface to Common Lisp},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/lokedhs/cl-rabbit},
-            }
-        
+@online{ref44,
+ title       = {messageQueue-package: Allow R to communicate with message queues},
+ urldate     = {2022-10-31},
+ url         = {https://rdrr.io/rforge/messageQueue/man/messageQueue-package.html},
+}
 
 
-            @online{ref63,
-             title       = {Habari Client for RabbitMQ | Habarisoft},
-             urldate     = {2022-10-31},
-             url         = {http://www.habarisoft.com/habari_rabbitmq.html},
-            }
-        
-
-
-            @online{ref64,
-             title       = {Langohr, an idiomatic Clojure RabbitMQ client | Clojure AMQP 0.9.1 client},
-             urldate     = {2022-10-31},
-             url         = {http://clojurerabbitmq.info/},
-            }
-        
-
-
-            @online{ref65,
-             title       = {GitHub - andersfugmann/amqp-client: OCaml Amqp client library for Async and Lwt.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/andersfugmann/amqp-client},
-            }
-        
-
-
-            @online{ref66,
-             title       = { Erlang RabbitMQ Client library - RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://www.rabbitmq.com/erlang-client-user-guide.html},
-            }
-        
-
-
-            @online{ref67,
-             title       = {GitHub - jerryluk/rabbitmq-jruby-client: RabbitMQ JRuby Client using Java RabbitMQ client},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/jerryluk/rabbitmq-jruby-client},
-            }
-        
-
-
-            @online{ref68,
-             title       = {GitHub - cloudamqp/amqp-client.cr: An AMQP 0-9-1 client for Crystal},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/cloudamqp/amqp-client.cr},
-            }
-        
-
-
-            @online{ref69,
-             title       = {GitHub - retupmoca/P6-Net-AMQP},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/retupmoca/P6-Net-AMQP},
-            }
-        
-
-
-            @online{ref70,
-             title       = {RabbitMQ with Arduino Uno - Stack Overflow},
-             urldate     = {2022-10-31},
-             url         = {https://stackoverflow.com/questions/44865473/rabbitmq-with-arduino-uno},
-            }
-        
-
-
-            @online{ref71,
-             title       = {LabbitMQ Toolkit for LabVIEW - Download - VIPM by JKI},
-             urldate     = {2022-10-31},
-             url         = {https://www.vipm.io/package/distrio_labbitmq/},
-            }
-        
-
-
-            @online{ref72,
-             title       = {GitHub - symmetryinvestments/rabbitmq-d: Bindings for librabbitmq-c for the D programming language},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/symmetryinvestments/rabbitmq-d},
-            }
-        
-
-
-            @online{ref73,
-             title       = {GTI-IA. Grupo de Tecnología Informática-Inteligencia Artificial},
-             urldate     = {2022-10-31},
-             url         = {http://www.gti-ia.upv.es/sma/tools/AdaBinding/index.php},
-            }
-        
-
-
-            @online{ref74,
-             title       = {GitHub - dropbox/amqp-coffee: An AMQP 0.9.1 client for Node.js.},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/dropbox/amqp-coffee},
-            }
-        
-
-
-            @online{ref75,
-             title       = {GitHub - CymaticLabs/Unity3D.Amqp: AMQP client library for Unity 3D supporting RabbitMQ},
-             urldate     = {2022-10-31},
-             url         = {https://github.com/CymaticLabs/Unity3D.Amqp},
-            }
-        
+
+@online{ref45,
+ title       = {Bunny, a dead easy to use RabbitMQ Ruby client},
+ urldate     = {2022-10-31},
+ url         = {http://rubybunny.info/},
+}
+
+
+
+@online{ref46,
+ title       = {GitHub - sstone/amqp-client: Simple fault-tolerant AMQP client written in Scala},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/sstone/amqp-client},
+}
+
+
+
+@online{ref47,
+ title       = {GitHub - mathworks-ref-arch/matlab-rabbitmq: MATLAB Interface for RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/mathworks-ref-arch/matlab-rabbitmq},
+}
+
+
+
+@online{ref48,
+ title       = {SAS Help Center},
+ urldate     = {2022-10-31},
+ url         = {https://documentation.sas.com/doc/en/espcdc/6.1/espca/p1k84sxazgi57dn19ij9yz9tu6u6.htm},
+}
+
+
+
+@online{ref49,
+ title       = {GitHub - amqp-rs/lapin: AMQP client library in Rust, with a clean, futures based API},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/sozu-proxy/lapin},
+}
+
+
+
+@online{ref50,
+ title       = {GitHub - cooldaemon/RabbitFoot: An asynchronous and multi channel Perl AMQP client.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/cooldaemon/RabbitFoot},
+}
+
+
+
+@online{ref51,
+ title       = {GitHub - rabbitmq/rabbitmq-objc-client: RabbitMQ client for Objective-C and Swift},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/rabbitmq/rabbitmq-objc-client/},
+}
+
+
+
+@online{ref52,
+ title       = {dart_amqp | Dart Package},
+ urldate     = {2022-10-31},
+ url         = {https://pub.dev/packages/dart_amqp},
+}
+
+
+
+@online{ref53,
+ title       = {GitHub - rabbitmq/rabbitmq-objc-client: RabbitMQ client for Objective-C and Swift},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/rabbitmq/rabbitmq-objc-client/},
+}
+
+
+
+@online{ref54,
+ title       = {GitHub - JuliaComputing/AMQPClient.jl: A Julia AMQP (Advanced Message Queuing Protocol) / RabbitMQ Client.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/JuliaComputing/AMQPClient.jl},
+}
+
+
+
+@online{ref55,
+ title       = { .NET/C# RabbitMQ Client Library - RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://www.rabbitmq.com/dotnet.html},
+}
+
+
+
+@online{ref56,
+ title       = {RabbitMQ Native Grails Plugin Documentation},
+ urldate     = {2022-10-31},
+ url         = {https://plugins.grails.org/plugin/budjb/rabbitmq-native},
+}
+
+
+
+@online{ref57,
+ title       = {GitHub - wingify/lua-resty-rabbitmqstomp: Opinionated Lua RabbitMQ client library},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/wingify/lua-resty-rabbitmqstomp},
+}
+
+
+
+@online{ref58,
+ title       = {GitHub - hreinhardt/amqp: Haskell AMQP client library},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/hreinhardt/amqp},
+}
+
+
+
+@online{ref59,
+ title       = {Assorted Ramblings: Using RabbitMQ from COBOL},
+ urldate     = {2022-10-31},
+ url         = {https://assortedrambles.blogspot.com/2013/04/using-rabbitmq-from-cobol_9584.html},
+}
+
+
+
+@online{ref60,
+ title       = {GitHub - pma/amqp: Idiomatic Elixir client for RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/pma/amqp},
+}
+
+
+
+@online{ref61,
+ title       = {Utilizing RabbitMQ with F# | codesuji},
+ urldate     = {2022-10-31},
+ url         = {https://www.codesuji.com/2019/10/24/F-RabbitMQ/},
+}
+
+
+
+@online{ref62,
+ title       = {GitHub - lokedhs/cl-rabbit: RabbitMQ interface to Common Lisp},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/lokedhs/cl-rabbit},
+}
+
+
+
+@online{ref63,
+ title       = {Habari Client for RabbitMQ | Habarisoft},
+ urldate     = {2022-10-31},
+ url         = {http://www.habarisoft.com/habari_rabbitmq.html},
+}
+
+
+
+@online{ref64,
+ title       = {Langohr, an idiomatic Clojure RabbitMQ client | Clojure AMQP 0.9.1 client},
+ urldate     = {2022-10-31},
+ url         = {http://clojurerabbitmq.info/},
+}
+
+
+
+@online{ref65,
+ title       = {GitHub - andersfugmann/amqp-client: OCaml Amqp client library for Async and Lwt.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/andersfugmann/amqp-client},
+}
+
+
+
+@online{ref66,
+ title       = { Erlang RabbitMQ Client library - RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://www.rabbitmq.com/erlang-client-user-guide.html},
+}
+
+
+
+@online{ref67,
+ title       = {GitHub - jerryluk/rabbitmq-jruby-client: RabbitMQ JRuby Client using Java RabbitMQ client},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/jerryluk/rabbitmq-jruby-client},
+}
+
+
+
+@online{ref68,
+ title       = {GitHub - cloudamqp/amqp-client.cr: An AMQP 0-9-1 client for Crystal},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/cloudamqp/amqp-client.cr},
+}
+
+
+
+@online{ref69,
+ title       = {GitHub - retupmoca/P6-Net-AMQP},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/retupmoca/P6-Net-AMQP},
+}
+
+
+
+@online{ref70,
+ title       = {RabbitMQ with Arduino Uno - Stack Overflow},
+ urldate     = {2022-10-31},
+ url         = {https://stackoverflow.com/questions/44865473/rabbitmq-with-arduino-uno},
+}
+
+
+
+@online{ref71,
+ title       = {LabbitMQ Toolkit for LabVIEW - Download - VIPM by JKI},
+ urldate     = {2022-10-31},
+ url         = {https://www.vipm.io/package/distrio_labbitmq/},
+}
+
+
+
+@online{ref72,
+ title       = {GitHub - symmetryinvestments/rabbitmq-d: Bindings for librabbitmq-c for the D programming language},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/symmetryinvestments/rabbitmq-d},
+}
+
+
+
+@online{ref73,
+ title       = {GTI-IA. Grupo de Tecnología Informática-Inteligencia Artificial},
+ urldate     = {2022-10-31},
+ url         = {http://www.gti-ia.upv.es/sma/tools/AdaBinding/index.php},
+}
+
+
+
+@online{ref74,
+ title       = {GitHub - dropbox/amqp-coffee: An AMQP 0.9.1 client for Node.js.},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/dropbox/amqp-coffee},
+}
+
+
+
+@online{ref75,
+ title       = {GitHub - CymaticLabs/Unity3D.Amqp: AMQP client library for Unity 3D supporting RabbitMQ},
+ urldate     = {2022-10-31},
+ url         = {https://github.com/CymaticLabs/Unity3D.Amqp},
+}
+
 
