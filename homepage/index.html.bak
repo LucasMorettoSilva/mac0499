@@ -92,7 +92,7 @@
             </ul>
           </p>
           <p class="text-justify">
-            E avalia os trade-offs gerados numa aplicação considerando os seguintes atributos estruturais de microsserviços:
+            E avalia os trade-offs gerados numa aplicação considerandos os seguintes atributos estruturais de microsserviços:
             <ul>
               <li>Compartilhamento de bases de dados entre módulos;</li>
               <li>Heterogeneidade de tecnologias;</li>
